@@ -1,0 +1,31 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/07.UI_Toolkit/USS/OptionMenu/OptionMenu.uss"/>
+    <ui:VisualElement name="option-menu-canvas" class="option-menu-canvas">
+        <ui:VisualElement name="option-menu-panel" class="option-menu-panel">
+            <ui:Label name="option-title-label" text="Option" class="option-title-label"/>
+            <ui:VisualElement name="option-setting-group" class="option-setting-group">
+                <ui:VisualElement name="sound-setting-area" class="option-setting-area sound-setting-area">
+                    <ui:Label name="sound-description-label" text="Sound" class="option-description-label"/>
+                    <ui:VisualElement name="sound-control-area" class="sound-control-area">
+                        <ui:Label name="sound-minus-label" text="−" picking-mode="Ignore" class="sound-direction-label"/>
+                        <ui:Slider name="sound-slider" low-value="0" high-value="100" value="100" show-input-field="False" class="sound-slider"/>
+                        <ui:Label name="sound-plus-label" text="+" picking-mode="Ignore" class="sound-direction-label"/>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="area-help-setting-area" class="option-setting-area help-setting-area">
+                    <ui:Label name="area-help-description-label" text="Cell Help" class="option-description-label"/>
+                    <ui:Button name="area-help-button" class="help-state-button">
+                        <ui:Label name="area-help-state-label" text="On" picking-mode="Ignore" class="help-state-label"/>
+                    </ui:Button>
+                </ui:VisualElement>
+                <ui:VisualElement name="same-value-help-setting-area" class="option-setting-area help-setting-area">
+                    <ui:Label name="same-value-help-description-label" text="Same Value Help" class="option-description-label"/>
+                    <ui:Button name="same-value-help-button" class="help-state-button">
+                        <ui:Label name="same-value-help-state-label" text="On" picking-mode="Ignore" class="help-state-label"/>
+                    </ui:Button>
+                </ui:VisualElement>
+                <ui:Button name="return-button" text="Return" class="return-button"/>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

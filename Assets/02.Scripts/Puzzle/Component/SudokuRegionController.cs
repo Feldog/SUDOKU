@@ -5,7 +5,7 @@ namespace SUDOKU.Puzzle.Component
     using Data;
     using Define;
 
-    public sealed class SudokuRegionController : MonoBehaviour
+    public class SudokuRegionController : MonoBehaviour
     {
         [Tooltip("직쏘 Region Map을 사용할지 여부입니다. 비활성화하면 기본 3×3 Region을 사용합니다.")]
         [SerializeField] private bool useJigsawRegion;

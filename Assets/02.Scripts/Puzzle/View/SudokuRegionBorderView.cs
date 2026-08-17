@@ -6,17 +6,15 @@ namespace SUDOKU.Puzzle.View
 {
     using Define;
 
-    public sealed class SudokuRegionBorderView : MonoBehaviour
+    public class SudokuRegionBorderView : MonoBehaviour
     {
-        private const string TopBorderClass = "border-top-region";
         private const string RightBorderClass = "border-right-region";
         private const string BottomBorderClass = "border-bottom-region";
-        private const string LeftBorderClass = "border-left-region";
 
         [Tooltip("Region Border를 적용할 게임 보드 UI Document입니다.")]
         [SerializeField] private UIDocument gameBoardDocument;
 
-        private readonly VisualElement[] cells = new VisualElement[SudokuDefine.CellCount];
+        private readonly VisualElement[] regionBorderElements = new VisualElement[SudokuDefine.CellCount];
 
         /// <summary>
         /// 셀별 Region ID를 비교해 게임 보드의 Region Border를 적용합니다.
@@ -30,7 +28,7 @@ namespace SUDOKU.Puzzle.View
                 return;
             }
 
-            if (!CacheCells())
+            if (!CacheBorderElements())
             {
                 return;
             }
@@ -40,28 +38,24 @@ namespace SUDOKU.Puzzle.View
                 for (int column = 0; column < SudokuDefine.BoardSize; column++)
                 {
                     int cellIndex = row * SudokuDefine.BoardSize + column;
-                    VisualElement cell = cells[cellIndex];
+                    VisualElement borderElement = regionBorderElements[cellIndex];
 
-                    bool hasTopBorder = row == 0;
-                    bool hasLeftBorder = column == 0;
-                    bool hasRightBorder = column == SudokuDefine.BoardSize - 1
-                        || regionMap[cellIndex] != regionMap[cellIndex + 1];
-                    bool hasBottomBorder = row == SudokuDefine.BoardSize - 1
-                        || regionMap[cellIndex] != regionMap[cellIndex + SudokuDefine.BoardSize];
+                    bool hasRightBorder = column < SudokuDefine.BoardSize - 1
+                        && regionMap[cellIndex] != regionMap[cellIndex + 1];
+                    bool hasBottomBorder = row < SudokuDefine.BoardSize - 1
+                        && regionMap[cellIndex] != regionMap[cellIndex + SudokuDefine.BoardSize];
 
-                    SetBorderClass(cell, TopBorderClass, hasTopBorder);
-                    SetBorderClass(cell, RightBorderClass, hasRightBorder);
-                    SetBorderClass(cell, BottomBorderClass, hasBottomBorder);
-                    SetBorderClass(cell, LeftBorderClass, hasLeftBorder);
+                    SetBorderClass(borderElement, RightBorderClass, hasRightBorder);
+                    SetBorderClass(borderElement, BottomBorderClass, hasBottomBorder);
                 }
             }
         }
 
         /// <summary>
-        /// UI Document에서 81개 셀 요소를 이름으로 찾아 캐싱합니다.
+        /// UI Document에서 81개 Region Border Overlay를 이름으로 찾아 캐싱합니다.
         /// </summary>
         /// <returns>모든 셀을 찾았으면 true입니다.</returns>
-        private bool CacheCells()
+        private bool CacheBorderElements()
         {
             if (gameBoardDocument == null)
             {
@@ -77,14 +71,14 @@ namespace SUDOKU.Puzzle.View
                 {
                     int cellIndex = row * SudokuDefine.BoardSize + column;
 
-                    if (cells[cellIndex] == null)
+                    if (regionBorderElements[cellIndex] == null)
                     {
-                        cells[cellIndex] = root.Q<VisualElement>($"cell-{row}-{column}");
+                        regionBorderElements[cellIndex] = root.Q<VisualElement>($"region-border-{cellIndex}");
                     }
 
-                    if (cells[cellIndex] == null)
+                    if (regionBorderElements[cellIndex] == null)
                     {
-                        Debug.LogError($"게임 보드에서 cell-{row}-{column} 요소를 찾을 수 없습니다.", this);
+                        Debug.LogError($"게임 보드에서 region-border-{cellIndex} 요소를 찾을 수 없습니다.", this);
                         return false;
                     }
                 }
@@ -96,18 +90,18 @@ namespace SUDOKU.Puzzle.View
         /// <summary>
         /// 지정한 Border 클래스의 적용 여부를 갱신합니다.
         /// </summary>
-        /// <param name="cell">Border를 변경할 셀 요소입니다.</param>
+        /// <param name="borderElement">Border를 변경할 Overlay 요소입니다.</param>
         /// <param name="className">적용하거나 제거할 USS 클래스 이름입니다.</param>
         /// <param name="shouldApply">클래스를 적용해야 하면 true입니다.</param>
-        private static void SetBorderClass(VisualElement cell, string className, bool shouldApply)
+        private static void SetBorderClass(VisualElement borderElement, string className, bool shouldApply)
         {
             if (shouldApply)
             {
-                cell.AddToClassList(className);
+                borderElement.AddToClassList(className);
                 return;
             }
 
-            cell.RemoveFromClassList(className);
+            borderElement.RemoveFromClassList(className);
         }
     }
 }

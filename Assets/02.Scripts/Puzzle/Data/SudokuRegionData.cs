@@ -4,7 +4,7 @@ namespace SUDOKU.Puzzle.Data
 {
     using Define;
 
-    public sealed class SudokuRegionData
+    public class SudokuRegionData
     {
         private readonly int[] regionMap;
         private readonly List<int>[] regionCells;

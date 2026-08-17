@@ -6,7 +6,7 @@ namespace SUDOKU.Puzzle.Component
 {
     using Data;
 
-    public sealed class SudokuCellHistoryController : MonoBehaviour
+    public class SudokuCellHistoryController : MonoBehaviour
     {
         [Tooltip("값 변경 기록을 저장하고 복구할 Cell Controller입니다.")]
         [SerializeField] private SudokuCellController cellController;
@@ -188,7 +188,7 @@ namespace SUDOKU.Puzzle.Component
         /// <param name="currentValue">변경 후 셀 값입니다.</param>
         private void OnCellValueChanged(int cellIndex, int previousValue, int currentValue)
         {
-            if (isApplyingHistory)
+            if (isApplyingHistory || cellController.IsInitializingGivenCells)
             {
                 return;
             }

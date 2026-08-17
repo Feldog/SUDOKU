@@ -2,8 +2,9 @@
     --canvas-color: rgb(242, 241, 237);
     --board-color: rgb(250, 249, 245);
     --line-color: rgb(48, 48, 46);
-    --cell-line-width: 5px;
-    --region-line-width: 15px;
+    --cell-line-color: rgb(190, 189, 185);
+    --region-line-color: rgb(48, 48, 46);
+    --border-line-width: 5px;
 }
 
 .game-canvas {
@@ -41,31 +42,69 @@
 }
 
 .sudoku-board {
-    width: 960px;
-    height: 960px;
+    width: 954px;
+    height: 954px;
     flex-direction: column;
     flex-shrink: 0;
     background-color: var(--board-color);
 }
 
 .board-row {
-    width: 100%;
-    height: 11.111111%;
+    width: 954px;
+    height: 106px;
     flex-direction: row;
     flex-shrink: 0;
 }
 
 .board-cell {
-    width: 11.111111%;
-    height: 100%;
+    width: 106px;
+    height: 106px;
     flex-shrink: 0;
     align-items: center;
     justify-content: center;
     background-color: var(--board-color);
-    border-right-width: var(--cell-line-width);
-    border-bottom-width: var(--cell-line-width);
-    border-right-color: var(--line-color);
-    border-bottom-color: var(--line-color);
+}
+
+.cell-border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 106px;
+    height: 106px;
+    border-right-width: var(--border-line-width);
+    border-bottom-width: var(--border-line-width);
+    border-right-color: var(--cell-line-color);
+    border-bottom-color: var(--cell-line-color);
+}
+
+.region-border-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 954px;
+    height: 954px;
+}
+
+.region-border {
+    position: absolute;
+    width: 106px;
+    height: 106px;
+}
+
+.board-outer-border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 954px;
+    height: 954px;
+    border-top-width: var(--border-line-width);
+    border-right-width: var(--border-line-width);
+    border-bottom-width: var(--border-line-width);
+    border-left-width: var(--border-line-width);
+    border-top-color: var(--region-line-color);
+    border-right-color: var(--region-line-color);
+    border-bottom-color: var(--region-line-color);
+    border-left-color: var(--region-line-color);
 }
 
 .board-cell.help-highlighted {
@@ -81,28 +120,81 @@
 }
 
 .cell-label {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     color: var(--line-color);
     font-size: 64px;
-    -unity-font-style: bold;
+    -unity-font-definition: url("project://database/Assets/97.Font/Board Font/PretendardJP-Default Number SDF.asset");
+    -unity-font-style: normal;
     -unity-text-align: middle-center;
+    -unity-text-generator: standard;
 }
 
-.border-top-region {
-    border-top-width: var(--region-line-width);
-    border-top-color: var(--line-color);
+.memo-area {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 102px;
+    height: 102px;
+    margin-top: 2px;
+    margin-right: 2px;
+    margin-bottom: 2px;
+    margin-left: 2px;
+    flex-direction: column;
+}
+
+.memo-row {
+    width: 102px;
+    height: 34px;
+    min-height: 34px;
+    max-height: 34px;
+    flex-direction: row;
+    flex-shrink: 0;
+}
+
+.memo-label {
+    visibility: hidden;
+    width: 34px;
+    height: 34px;
+    min-width: 34px;
+    min-height: 34px;
+    max-width: 34px;
+    max-height: 34px;
+    margin: 0;
+    padding: 0;
+    flex-basis: 34px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    translate: -1px -1px;
+    color: var(--line-color);
+    font-size: 24px;
+    -unity-font-definition: url("project://database/Assets/97.Font/Board Font/PretendardJP-Default Number SDF.asset");
+    -unity-font-style: normal;
+    -unity-text-align: middle-center;
+    -unity-text-generator: standard;
+}
+
+.memo-label.memo-visible {
+    visibility: visible;
+}
+
+.cell-label.given {
+    -unity-font-style: bold;
+}
+
+.cell-label.invalid {
+    color: #d9534f;
 }
 
 .border-right-region {
-    border-right-width: var(--region-line-width);
-    border-right-color: var(--line-color);
+    border-right-width: var(--border-line-width);
+    border-right-color: var(--region-line-color);
 }
 
 .border-bottom-region {
-    border-bottom-width: var(--region-line-width);
-    border-bottom-color: var(--line-color);
-}
-
-.border-left-region {
-    border-left-width: var(--region-line-width);
-    border-left-color: var(--line-color);
+    border-bottom-width: var(--border-line-width);
+    border-bottom-color: var(--region-line-color);
 }

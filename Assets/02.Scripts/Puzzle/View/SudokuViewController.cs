@@ -7,23 +7,23 @@ namespace SUDOKU.Puzzle.View
     using Component;
     using Define;
 
-    public sealed class SudokuViewController : MonoBehaviour
+    public class SudokuViewController : MonoBehaviour
     {
         private const string FocusedCellClass = "focused";
+        private const string InvalidCellLabelClass = "invalid";
+        private const string GivenCellLabelClass = "given";
 
         [Tooltip("셀 선택과 숫자 표시를 처리할 게임 보드 UI Document입니다.")]
         [SerializeField] private UIDocument gameBoardDocument;
 
-        [Tooltip("숫자 및 지우기 버튼을 포함한 플레이어 컨트롤 UI Document입니다.")]
-        [SerializeField] private UIDocument playerControlDocument;
-
         [Tooltip("셀 데이터를 조회하고 수정할 Controller입니다.")]
         [SerializeField] private SudokuCellController cellController;
 
+        [Tooltip("선택된 셀 정보를 제공할 Sudoku Controller입니다.")]
+        [SerializeField] private SudokuController sudokuController;
+
         private readonly VisualElement[] cells = new VisualElement[SudokuDefine.CellCount];
         private readonly Label[] cellLabels = new Label[SudokuDefine.CellCount];
-        private readonly VisualElement[] valueButtons = new VisualElement[SudokuDefine.MaxCellValue + 1];
-
         private int focusedCellIndex = -1;
         private bool callbacksRegistered;
         private bool hasStarted;
@@ -54,39 +54,30 @@ namespace SUDOKU.Puzzle.View
         #endregion
 
         /// <summary>
-        /// 게임 보드 셀과 플레이어 입력 버튼의 이벤트를 등록합니다.
+        /// Cell 데이터와 Sudoku 선택 상태 변경 이벤트를 등록합니다.
         /// </summary>
         private void RegisterCallbacks()
         {
-            if (callbacksRegistered || !CacheVisualElements() || cellController == null)
+            if (callbacksRegistered || !CacheVisualElements()
+                || cellController == null || sudokuController == null)
             {
-                if (cellController == null)
+                if (cellController == null || sudokuController == null)
                 {
-                    Debug.LogError("Sudoku Cell Controller가 연결되지 않았습니다.", this);
+                    Debug.LogError("Sudoku View에 Cell Controller와 Sudoku Controller를 연결해야 합니다.", this);
                 }
 
                 return;
             }
 
-            for (int cellIndex = 0; cellIndex < cells.Length; cellIndex++)
-            {
-                cells[cellIndex].userData = cellIndex;
-                cells[cellIndex].focusable = true;
-                cells[cellIndex].RegisterCallback<ClickEvent>(OnCellClicked);
-            }
-
-            for (int value = SudokuDefine.EmptyCellValue; value <= SudokuDefine.MaxCellValue; value++)
-            {
-                valueButtons[value].userData = value;
-                valueButtons[value].RegisterCallback<ClickEvent>(OnValueButtonClicked);
-            }
-
+            sudokuController.CellSelected += OnCellSelected;
             cellController.CellValueChanged += OnCellValueChanged;
+            cellController.CellValidationChanged += OnCellValidationChanged;
+            cellController.GivenCellStateChanged += OnGivenCellStateChanged;
             callbacksRegistered = true;
         }
 
         /// <summary>
-        /// 등록한 UI 이벤트와 셀 데이터 변경 이벤트를 해제합니다.
+        /// 등록한 Cell 데이터와 Sudoku 선택 상태 변경 이벤트를 해제합니다.
         /// </summary>
         private void UnregisterCallbacks()
         {
@@ -95,19 +86,16 @@ namespace SUDOKU.Puzzle.View
                 return;
             }
 
-            for (int cellIndex = 0; cellIndex < cells.Length; cellIndex++)
-            {
-                cells[cellIndex]?.UnregisterCallback<ClickEvent>(OnCellClicked);
-            }
-
-            for (int value = SudokuDefine.EmptyCellValue; value <= SudokuDefine.MaxCellValue; value++)
-            {
-                valueButtons[value]?.UnregisterCallback<ClickEvent>(OnValueButtonClicked);
-            }
-
             if (cellController != null)
             {
                 cellController.CellValueChanged -= OnCellValueChanged;
+                cellController.CellValidationChanged -= OnCellValidationChanged;
+                cellController.GivenCellStateChanged -= OnGivenCellStateChanged;
+            }
+
+            if (sudokuController != null)
+            {
+                sudokuController.CellSelected -= OnCellSelected;
             }
 
             callbacksRegistered = false;
@@ -128,25 +116,26 @@ namespace SUDOKU.Puzzle.View
                 for (int cellIndex = 0; cellIndex < cellLabels.Length; cellIndex++)
                 {
                     ApplyCellValue(cellIndex, cellController.GetCellValue(cellIndex));
+                    ApplyCellValidation(cellIndex, cellController.IsCellValueValid(cellIndex));
+                    ApplyGivenCellState(cellIndex, cellController.IsGivenCell(cellIndex));
                 }
             }
 
         }
 
         /// <summary>
-        /// 두 UI Document에서 셀, 셀 Label, 숫자 버튼과 지우기 버튼을 찾아 캐싱합니다.
+        /// 게임 보드 UI Document에서 셀과 셀 Label을 찾아 캐싱합니다.
         /// </summary>
         /// <returns>필요한 모든 UI 요소를 찾았으면 true입니다.</returns>
         private bool CacheVisualElements()
         {
-            if (gameBoardDocument == null || playerControlDocument == null)
+            if (gameBoardDocument == null)
             {
-                Debug.LogError("게임 보드와 플레이어 컨트롤 UI Document를 모두 연결해야 합니다.", this);
+                Debug.LogError("게임 보드 UI Document를 연결해야 합니다.", this);
                 return false;
             }
 
             VisualElement boardRoot = gameBoardDocument.rootVisualElement;
-            VisualElement controlRoot = playerControlDocument.rootVisualElement;
 
             for (int row = 0; row < SudokuDefine.BoardSize; row++)
             {
@@ -164,61 +153,22 @@ namespace SUDOKU.Puzzle.View
                 }
             }
 
-            valueButtons[SudokuDefine.EmptyCellValue] = controlRoot.Q<VisualElement>("erase-button");
-
-            for (int value = SudokuDefine.MinCellValue; value <= SudokuDefine.MaxCellValue; value++)
-            {
-                valueButtons[value] = controlRoot.Q<VisualElement>($"number-button-{value}");
-            }
-
-            for (int value = SudokuDefine.EmptyCellValue; value <= SudokuDefine.MaxCellValue; value++)
-            {
-                if (valueButtons[value] == null)
-                {
-                    Debug.LogError($"플레이어 컨트롤 UI에서 값 {value}에 대응하는 버튼을 찾을 수 없습니다.", this);
-                    return false;
-                }
-            }
-
             return true;
         }
 
         /// <summary>
-        /// 클릭한 셀을 현재 입력 대상으로 선택하고 Focus 스타일을 적용합니다.
+        /// Sudoku Controller가 선택한 셀에 Focus 스타일을 적용합니다.
         /// </summary>
-        /// <param name="clickEvent">클릭된 셀 정보를 포함한 UI Toolkit 이벤트입니다.</param>
-        private void OnCellClicked(ClickEvent clickEvent)
+        /// <param name="selectedCellIndex">새로 선택된 셀 인덱스입니다.</param>
+        private void OnCellSelected(int selectedCellIndex)
         {
-            if (clickEvent.currentTarget is not VisualElement selectedCell
-                || selectedCell.userData is not int selectedCellIndex)
-            {
-                return;
-            }
-
             if (focusedCellIndex >= 0)
             {
                 cells[focusedCellIndex].RemoveFromClassList(FocusedCellClass);
             }
 
             focusedCellIndex = selectedCellIndex;
-            selectedCell.AddToClassList(FocusedCellClass);
-            selectedCell.Focus();
-        }
-
-        /// <summary>
-        /// 클릭한 숫자 또는 지우기 버튼의 값을 Cell Controller에 전달합니다.
-        /// </summary>
-        /// <param name="clickEvent">클릭된 입력 버튼 정보를 포함한 UI Toolkit 이벤트입니다.</param>
-        private void OnValueButtonClicked(ClickEvent clickEvent)
-        {
-            if (focusedCellIndex < 0
-                || clickEvent.currentTarget is not VisualElement valueButton
-                || valueButton.userData is not int value)
-            {
-                return;
-            }
-
-            cellController.SetCellValue(focusedCellIndex, value);
+            cells[focusedCellIndex].AddToClassList(FocusedCellClass);
         }
 
         /// <summary>
@@ -232,6 +182,26 @@ namespace SUDOKU.Puzzle.View
         }
 
         /// <summary>
+        /// Cell Controller의 검증 상태 변경 이벤트를 받아 셀 글자색을 갱신합니다.
+        /// </summary>
+        /// <param name="cellIndex">검증 상태가 변경된 셀 인덱스입니다.</param>
+        /// <param name="isValid">현재 셀 값이 Sudoku 규칙을 만족하는지 여부입니다.</param>
+        private void OnCellValidationChanged(int cellIndex, bool isValid)
+        {
+            ApplyCellValidation(cellIndex, isValid);
+        }
+
+        /// <summary>
+        /// Cell Controller의 Given 상태 변경 이벤트를 받아 셀 글꼴을 갱신합니다.
+        /// </summary>
+        /// <param name="cellIndex">Given 상태가 변경된 셀 인덱스입니다.</param>
+        /// <param name="isGiven">플레이어가 수정할 수 없는 Given 셀인지 여부입니다.</param>
+        private void OnGivenCellStateChanged(int cellIndex, bool isGiven)
+        {
+            ApplyGivenCellState(cellIndex, isGiven);
+        }
+
+        /// <summary>
         /// 지정한 셀 값을 게임 보드 Label에 표시합니다.
         /// </summary>
         /// <param name="cellIndex">표시를 갱신할 셀 인덱스입니다.</param>
@@ -241,6 +211,38 @@ namespace SUDOKU.Puzzle.View
             cellLabels[cellIndex].text = value == SudokuDefine.EmptyCellValue
                 ? string.Empty
                 : value.ToString(CultureInfo.InvariantCulture);
+        }
+
+        /// <summary>
+        /// 셀 검증 결과에 따라 Label의 잘못된 숫자 표시 클래스를 갱신합니다.
+        /// </summary>
+        /// <param name="cellIndex">글자색을 갱신할 셀 인덱스입니다.</param>
+        /// <param name="isValid">셀 값이 유효한지 여부입니다.</param>
+        private void ApplyCellValidation(int cellIndex, bool isValid)
+        {
+            if (isValid)
+            {
+                cellLabels[cellIndex].RemoveFromClassList(InvalidCellLabelClass);
+                return;
+            }
+
+            cellLabels[cellIndex].AddToClassList(InvalidCellLabelClass);
+        }
+
+        /// <summary>
+        /// Given 상태에 따라 셀 Label의 굵은 글꼴 클래스를 갱신합니다.
+        /// </summary>
+        /// <param name="cellIndex">글꼴을 갱신할 셀 인덱스입니다.</param>
+        /// <param name="isGiven">Given 셀인지 여부입니다.</param>
+        private void ApplyGivenCellState(int cellIndex, bool isGiven)
+        {
+            if (isGiven)
+            {
+                cellLabels[cellIndex].AddToClassList(GivenCellLabelClass);
+                return;
+            }
+
+            cellLabels[cellIndex].RemoveFromClassList(GivenCellLabelClass);
         }
     }
 }

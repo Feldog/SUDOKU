@@ -1,0 +1,16 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/07.UI_Toolkit/USS/ClearMenu/ClearMenu.uss"/>
+    <ui:VisualElement name="clear-menu-canvas" class="clear-menu-canvas">
+        <ui:VisualElement name="clear-menu-panel" class="clear-menu-panel">
+            <ui:Label name="clear-title-label" text="CLEAR" class="clear-title-label"/>
+            <ui:VisualElement name="completion-time-area" class="completion-time-area">
+                <ui:Label name="completion-time-title-label" text="TIME" class="completion-time-title-label"/>
+                <ui:Label name="completion-time-label" text="00:00" class="completion-time-label"/>
+            </ui:VisualElement>
+            <ui:VisualElement name="clear-button-area" class="clear-button-area">
+                <ui:Button name="restart-button" text="Restart" class="clear-menu-button"/>
+                <ui:Button name="mainmenu-button" text="Mainmenu" class="clear-menu-button"/>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

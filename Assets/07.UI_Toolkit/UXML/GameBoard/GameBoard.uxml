@@ -1,110 +1,1816 @@
-<ui:UXML xmlns:ui="UnityEngine.UIElements">
-    <Style src="project://database/Assets/07.UI_Toolkit/USS/GameBoard/GameBoard.uss" />
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/07.UI_Toolkit/USS/GameBoard/GameBoard.uss?fileID=7433441132597879392&amp;guid=cbbb297fc24bf5548b912447a42ebdfe&amp;type=3#GameBoard"/>
     <ui:VisualElement name="game-canvas" class="game-canvas">
-        <ui:VisualElement name="top-control-space" class="control-space top-control-space" picking-mode="Ignore" />
+        <ui:VisualElement name="top-control-space" picking-mode="Ignore" class="control-space top-control-space"/>
         <ui:VisualElement name="game-content" class="game-content">
             <ui:VisualElement name="sudoku-board" class="sudoku-board">
-            <ui:VisualElement name="row-0" class="board-row">
-                <ui:VisualElement name="cell-0-0" class="board-cell row-0 column-0 border-top-region border-left-region"><ui:Label name="cell-label-0-0" class="cell-label" /></ui:VisualElement>
-                <ui:VisualElement name="cell-0-1" class="board-cell row-0 column-1 border-top-region"><ui:Label name="cell-label-0-1" class="cell-label" /></ui:VisualElement>
-                <ui:VisualElement name="cell-0-2" class="board-cell row-0 column-2 border-top-region border-right-region"><ui:Label name="cell-label-0-2" class="cell-label" /></ui:VisualElement>
-                <ui:VisualElement name="cell-0-3" class="board-cell row-0 column-3 border-top-region"><ui:Label name="cell-label-0-3" class="cell-label" /></ui:VisualElement>
-                <ui:VisualElement name="cell-0-4" class="board-cell row-0 column-4 border-top-region"><ui:Label name="cell-label-0-4" class="cell-label" /></ui:VisualElement>
-                <ui:VisualElement name="cell-0-5" class="board-cell row-0 column-5 border-top-region border-right-region"><ui:Label name="cell-label-0-5" class="cell-label" /></ui:VisualElement>
-                <ui:VisualElement name="cell-0-6" class="board-cell row-0 column-6 border-top-region"><ui:Label name="cell-label-0-6" class="cell-label" /></ui:VisualElement>
-                <ui:VisualElement name="cell-0-7" class="board-cell row-0 column-7 border-top-region"><ui:Label name="cell-label-0-7" class="cell-label" /></ui:VisualElement>
-                <ui:VisualElement name="cell-0-8" class="board-cell row-0 column-8 border-top-region border-right-region"><ui:Label name="cell-label-0-8" class="cell-label" /></ui:VisualElement>
-            </ui:VisualElement>
-            <ui:VisualElement name="row-1" class="board-row">
-                <ui:VisualElement name="cell-1-0" class="board-cell row-1 column-0 border-left-region"><ui:Label name="cell-label-1-0" class="cell-label" /></ui:VisualElement>
-                <ui:VisualElement name="cell-1-1" class="board-cell row-1 column-1"><ui:Label name="cell-label-1-1" class="cell-label" /></ui:VisualElement>
-                <ui:VisualElement name="cell-1-2" class="board-cell row-1 column-2 border-right-region"><ui:Label name="cell-label-1-2" class="cell-label" /></ui:VisualElement>
-                <ui:VisualElement name="cell-1-3" class="board-cell row-1 column-3"><ui:Label name="cell-label-1-3" class="cell-label" /></ui:VisualElement>
-                <ui:VisualElement name="cell-1-4" class="board-cell row-1 column-4"><ui:Label name="cell-label-1-4" class="cell-label" /></ui:VisualElement>
-                <ui:VisualElement name="cell-1-5" class="board-cell row-1 column-5 border-right-region"><ui:Label name="cell-label-1-5" class="cell-label" /></ui:VisualElement>
-                <ui:VisualElement name="cell-1-6" class="board-cell row-1 column-6"><ui:Label name="cell-label-1-6" class="cell-label" /></ui:VisualElement>
-                <ui:VisualElement name="cell-1-7" class="board-cell row-1 column-7"><ui:Label name="cell-label-1-7" class="cell-label" /></ui:VisualElement>
-                <ui:VisualElement name="cell-1-8" class="board-cell row-1 column-8 border-right-region"><ui:Label name="cell-label-1-8" class="cell-label" /></ui:VisualElement>
-            </ui:VisualElement>
-            <ui:VisualElement name="row-2" class="board-row">
-                <ui:VisualElement name="cell-2-0" class="board-cell row-2 column-0 border-left-region border-bottom-region"><ui:Label name="cell-label-2-0" class="cell-label" /></ui:VisualElement>
-                <ui:VisualElement name="cell-2-1" class="board-cell row-2 column-1 border-bottom-region"><ui:Label name="cell-label-2-1" class="cell-label" /></ui:VisualElement>
-                <ui:VisualElement name="cell-2-2" class="board-cell row-2 column-2 border-bottom-region border-right-region"><ui:Label name="cell-label-2-2" class="cell-label" /></ui:VisualElement>
-                <ui:VisualElement name="cell-2-3" class="board-cell row-2 column-3 border-bottom-region"><ui:Label name="cell-label-2-3" class="cell-label" /></ui:VisualElement>
-                <ui:VisualElement name="cell-2-4" class="board-cell row-2 column-4 border-bottom-region"><ui:Label name="cell-label-2-4" class="cell-label" /></ui:VisualElement>
-                <ui:VisualElement name="cell-2-5" class="board-cell row-2 column-5 border-bottom-region border-right-region"><ui:Label name="cell-label-2-5" class="cell-label" /></ui:VisualElement>
-                <ui:VisualElement name="cell-2-6" class="board-cell row-2 column-6 border-bottom-region"><ui:Label name="cell-label-2-6" class="cell-label" /></ui:VisualElement>
-                <ui:VisualElement name="cell-2-7" class="board-cell row-2 column-7 border-bottom-region"><ui:Label name="cell-label-2-7" class="cell-label" /></ui:VisualElement>
-                <ui:VisualElement name="cell-2-8" class="board-cell row-2 column-8 border-bottom-region border-right-region"><ui:Label name="cell-label-2-8" class="cell-label" /></ui:VisualElement>
-            </ui:VisualElement>
-            <ui:VisualElement name="row-3" class="board-row">
-                <ui:VisualElement name="cell-3-0" class="board-cell row-3 column-0 border-left-region"><ui:Label name="cell-label-3-0" class="cell-label" /></ui:VisualElement>
-                <ui:VisualElement name="cell-3-1" class="board-cell row-3 column-1"><ui:Label name="cell-label-3-1" class="cell-label" /></ui:VisualElement>
-                <ui:VisualElement name="cell-3-2" class="board-cell row-3 column-2 border-right-region"><ui:Label name="cell-label-3-2" class="cell-label" /></ui:VisualElement>
-                <ui:VisualElement name="cell-3-3" class="board-cell row-3 column-3"><ui:Label name="cell-label-3-3" class="cell-label" /></ui:VisualElement>
-                <ui:VisualElement name="cell-3-4" class="board-cell row-3 column-4"><ui:Label name="cell-label-3-4" class="cell-label" /></ui:VisualElement>
-                <ui:VisualElement name="cell-3-5" class="board-cell row-3 column-5 border-right-region"><ui:Label name="cell-label-3-5" class="cell-label" /></ui:VisualElement>
-                <ui:VisualElement name="cell-3-6" class="board-cell row-3 column-6"><ui:Label name="cell-label-3-6" class="cell-label" /></ui:VisualElement>
-                <ui:VisualElement name="cell-3-7" class="board-cell row-3 column-7"><ui:Label name="cell-label-3-7" class="cell-label" /></ui:VisualElement>
-                <ui:VisualElement name="cell-3-8" class="board-cell row-3 column-8 border-right-region"><ui:Label name="cell-label-3-8" class="cell-label" /></ui:VisualElement>
-            </ui:VisualElement>
-            <ui:VisualElement name="row-4" class="board-row">
-                <ui:VisualElement name="cell-4-0" class="board-cell row-4 column-0 border-left-region"><ui:Label name="cell-label-4-0" class="cell-label" /></ui:VisualElement>
-                <ui:VisualElement name="cell-4-1" class="board-cell row-4 column-1"><ui:Label name="cell-label-4-1" class="cell-label" /></ui:VisualElement>
-                <ui:VisualElement name="cell-4-2" class="board-cell row-4 column-2 border-right-region"><ui:Label name="cell-label-4-2" class="cell-label" /></ui:VisualElement>
-                <ui:VisualElement name="cell-4-3" class="board-cell row-4 column-3"><ui:Label name="cell-label-4-3" class="cell-label" /></ui:VisualElement>
-                <ui:VisualElement name="cell-4-4" class="board-cell row-4 column-4"><ui:Label name="cell-label-4-4" class="cell-label" /></ui:VisualElement>
-                <ui:VisualElement name="cell-4-5" class="board-cell row-4 column-5 border-right-region"><ui:Label name="cell-label-4-5" class="cell-label" /></ui:VisualElement>
-                <ui:VisualElement name="cell-4-6" class="board-cell row-4 column-6"><ui:Label name="cell-label-4-6" class="cell-label" /></ui:VisualElement>
-                <ui:VisualElement name="cell-4-7" class="board-cell row-4 column-7"><ui:Label name="cell-label-4-7" class="cell-label" /></ui:VisualElement>
-                <ui:VisualElement name="cell-4-8" class="board-cell row-4 column-8 border-right-region"><ui:Label name="cell-label-4-8" class="cell-label" /></ui:VisualElement>
-            </ui:VisualElement>
-            <ui:VisualElement name="row-5" class="board-row">
-                <ui:VisualElement name="cell-5-0" class="board-cell row-5 column-0 border-left-region border-bottom-region"><ui:Label name="cell-label-5-0" class="cell-label" /></ui:VisualElement>
-                <ui:VisualElement name="cell-5-1" class="board-cell row-5 column-1 border-bottom-region"><ui:Label name="cell-label-5-1" class="cell-label" /></ui:VisualElement>
-                <ui:VisualElement name="cell-5-2" class="board-cell row-5 column-2 border-bottom-region border-right-region"><ui:Label name="cell-label-5-2" class="cell-label" /></ui:VisualElement>
-                <ui:VisualElement name="cell-5-3" class="board-cell row-5 column-3 border-bottom-region"><ui:Label name="cell-label-5-3" class="cell-label" /></ui:VisualElement>
-                <ui:VisualElement name="cell-5-4" class="board-cell row-5 column-4 border-bottom-region"><ui:Label name="cell-label-5-4" class="cell-label" /></ui:VisualElement>
-                <ui:VisualElement name="cell-5-5" class="board-cell row-5 column-5 border-bottom-region border-right-region"><ui:Label name="cell-label-5-5" class="cell-label" /></ui:VisualElement>
-                <ui:VisualElement name="cell-5-6" class="board-cell row-5 column-6 border-bottom-region"><ui:Label name="cell-label-5-6" class="cell-label" /></ui:VisualElement>
-                <ui:VisualElement name="cell-5-7" class="board-cell row-5 column-7 border-bottom-region"><ui:Label name="cell-label-5-7" class="cell-label" /></ui:VisualElement>
-                <ui:VisualElement name="cell-5-8" class="board-cell row-5 column-8 border-bottom-region border-right-region"><ui:Label name="cell-label-5-8" class="cell-label" /></ui:VisualElement>
-            </ui:VisualElement>
-            <ui:VisualElement name="row-6" class="board-row">
-                <ui:VisualElement name="cell-6-0" class="board-cell row-6 column-0 border-left-region"><ui:Label name="cell-label-6-0" class="cell-label" /></ui:VisualElement>
-                <ui:VisualElement name="cell-6-1" class="board-cell row-6 column-1"><ui:Label name="cell-label-6-1" class="cell-label" /></ui:VisualElement>
-                <ui:VisualElement name="cell-6-2" class="board-cell row-6 column-2 border-right-region"><ui:Label name="cell-label-6-2" class="cell-label" /></ui:VisualElement>
-                <ui:VisualElement name="cell-6-3" class="board-cell row-6 column-3"><ui:Label name="cell-label-6-3" class="cell-label" /></ui:VisualElement>
-                <ui:VisualElement name="cell-6-4" class="board-cell row-6 column-4"><ui:Label name="cell-label-6-4" class="cell-label" /></ui:VisualElement>
-                <ui:VisualElement name="cell-6-5" class="board-cell row-6 column-5 border-right-region"><ui:Label name="cell-label-6-5" class="cell-label" /></ui:VisualElement>
-                <ui:VisualElement name="cell-6-6" class="board-cell row-6 column-6"><ui:Label name="cell-label-6-6" class="cell-label" /></ui:VisualElement>
-                <ui:VisualElement name="cell-6-7" class="board-cell row-6 column-7"><ui:Label name="cell-label-6-7" class="cell-label" /></ui:VisualElement>
-                <ui:VisualElement name="cell-6-8" class="board-cell row-6 column-8 border-right-region"><ui:Label name="cell-label-6-8" class="cell-label" /></ui:VisualElement>
-            </ui:VisualElement>
-            <ui:VisualElement name="row-7" class="board-row">
-                <ui:VisualElement name="cell-7-0" class="board-cell row-7 column-0 border-left-region"><ui:Label name="cell-label-7-0" class="cell-label" /></ui:VisualElement>
-                <ui:VisualElement name="cell-7-1" class="board-cell row-7 column-1"><ui:Label name="cell-label-7-1" class="cell-label" /></ui:VisualElement>
-                <ui:VisualElement name="cell-7-2" class="board-cell row-7 column-2 border-right-region"><ui:Label name="cell-label-7-2" class="cell-label" /></ui:VisualElement>
-                <ui:VisualElement name="cell-7-3" class="board-cell row-7 column-3"><ui:Label name="cell-label-7-3" class="cell-label" /></ui:VisualElement>
-                <ui:VisualElement name="cell-7-4" class="board-cell row-7 column-4"><ui:Label name="cell-label-7-4" class="cell-label" /></ui:VisualElement>
-                <ui:VisualElement name="cell-7-5" class="board-cell row-7 column-5 border-right-region"><ui:Label name="cell-label-7-5" class="cell-label" /></ui:VisualElement>
-                <ui:VisualElement name="cell-7-6" class="board-cell row-7 column-6"><ui:Label name="cell-label-7-6" class="cell-label" /></ui:VisualElement>
-                <ui:VisualElement name="cell-7-7" class="board-cell row-7 column-7"><ui:Label name="cell-label-7-7" class="cell-label" /></ui:VisualElement>
-                <ui:VisualElement name="cell-7-8" class="board-cell row-7 column-8 border-right-region"><ui:Label name="cell-label-7-8" class="cell-label" /></ui:VisualElement>
-            </ui:VisualElement>
-            <ui:VisualElement name="row-8" class="board-row">
-                <ui:VisualElement name="cell-8-0" class="board-cell row-8 column-0 border-left-region border-bottom-region"><ui:Label name="cell-label-8-0" class="cell-label" /></ui:VisualElement>
-                <ui:VisualElement name="cell-8-1" class="board-cell row-8 column-1 border-bottom-region"><ui:Label name="cell-label-8-1" class="cell-label" /></ui:VisualElement>
-                <ui:VisualElement name="cell-8-2" class="board-cell row-8 column-2 border-bottom-region border-right-region"><ui:Label name="cell-label-8-2" class="cell-label" /></ui:VisualElement>
-                <ui:VisualElement name="cell-8-3" class="board-cell row-8 column-3 border-bottom-region"><ui:Label name="cell-label-8-3" class="cell-label" /></ui:VisualElement>
-                <ui:VisualElement name="cell-8-4" class="board-cell row-8 column-4 border-bottom-region"><ui:Label name="cell-label-8-4" class="cell-label" /></ui:VisualElement>
-                <ui:VisualElement name="cell-8-5" class="board-cell row-8 column-5 border-bottom-region border-right-region"><ui:Label name="cell-label-8-5" class="cell-label" /></ui:VisualElement>
-                <ui:VisualElement name="cell-8-6" class="board-cell row-8 column-6 border-bottom-region"><ui:Label name="cell-label-8-6" class="cell-label" /></ui:VisualElement>
-                <ui:VisualElement name="cell-8-7" class="board-cell row-8 column-7 border-bottom-region"><ui:Label name="cell-label-8-7" class="cell-label" /></ui:VisualElement>
-                <ui:VisualElement name="cell-8-8" class="board-cell row-8 column-8 border-bottom-region border-right-region"><ui:Label name="cell-label-8-8" class="cell-label" /></ui:VisualElement>
-            </ui:VisualElement>
+                <ui:VisualElement name="row-0" class="board-row">
+                    <ui:VisualElement name="cell-0-0" class="board-cell">
+                        <ui:Label name="cell-label-0-0" class="cell-label"/>
+                        <ui:VisualElement name="memo-area-0" picking-mode="Ignore" class="memo-area">
+                            <ui:VisualElement name="memo-row-0-0" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-0-1" text="1" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-0-2" text="2" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-0-3" text="3" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-0-1" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-0-4" text="4" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-0-5" text="5" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-0-6" text="6" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-0-2" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-0-7" text="7" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-0-8" text="8" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-0-9" text="9" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="cell-border-0" picking-mode="Ignore" class="cell-border"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="cell-0-1" class="board-cell">
+                        <ui:Label name="cell-label-0-1" class="cell-label"/>
+                        <ui:VisualElement name="memo-area-1" picking-mode="Ignore" class="memo-area">
+                            <ui:VisualElement name="memo-row-1-0" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-1-1" text="1" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-1-2" text="2" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-1-3" text="3" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-1-1" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-1-4" text="4" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-1-5" text="5" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-1-6" text="6" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-1-2" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-1-7" text="7" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-1-8" text="8" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-1-9" text="9" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="cell-border-1" picking-mode="Ignore" class="cell-border"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="cell-0-2" class="board-cell">
+                        <ui:Label name="cell-label-0-2" class="cell-label"/>
+                        <ui:VisualElement name="memo-area-2" picking-mode="Ignore" class="memo-area">
+                            <ui:VisualElement name="memo-row-2-0" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-2-1" text="1" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-2-2" text="2" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-2-3" text="3" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-2-1" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-2-4" text="4" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-2-5" text="5" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-2-6" text="6" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-2-2" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-2-7" text="7" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-2-8" text="8" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-2-9" text="9" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="cell-border-2" picking-mode="Ignore" class="cell-border"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="cell-0-3" class="board-cell">
+                        <ui:Label name="cell-label-0-3" class="cell-label"/>
+                        <ui:VisualElement name="memo-area-3" picking-mode="Ignore" class="memo-area">
+                            <ui:VisualElement name="memo-row-3-0" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-3-1" text="1" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-3-2" text="2" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-3-3" text="3" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-3-1" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-3-4" text="4" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-3-5" text="5" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-3-6" text="6" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-3-2" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-3-7" text="7" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-3-8" text="8" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-3-9" text="9" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="cell-border-3" picking-mode="Ignore" class="cell-border"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="cell-0-4" class="board-cell">
+                        <ui:Label name="cell-label-0-4" class="cell-label"/>
+                        <ui:VisualElement name="memo-area-4" picking-mode="Ignore" class="memo-area">
+                            <ui:VisualElement name="memo-row-4-0" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-4-1" text="1" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-4-2" text="2" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-4-3" text="3" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-4-1" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-4-4" text="4" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-4-5" text="5" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-4-6" text="6" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-4-2" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-4-7" text="7" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-4-8" text="8" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-4-9" text="9" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="cell-border-4" picking-mode="Ignore" class="cell-border"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="cell-0-5" class="board-cell">
+                        <ui:Label name="cell-label-0-5" class="cell-label"/>
+                        <ui:VisualElement name="memo-area-5" picking-mode="Ignore" class="memo-area">
+                            <ui:VisualElement name="memo-row-5-0" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-5-1" text="1" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-5-2" text="2" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-5-3" text="3" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-5-1" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-5-4" text="4" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-5-5" text="5" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-5-6" text="6" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-5-2" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-5-7" text="7" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-5-8" text="8" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-5-9" text="9" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="cell-border-5" picking-mode="Ignore" class="cell-border"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="cell-0-6" class="board-cell">
+                        <ui:Label name="cell-label-0-6" class="cell-label"/>
+                        <ui:VisualElement name="memo-area-6" picking-mode="Ignore" class="memo-area">
+                            <ui:VisualElement name="memo-row-6-0" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-6-1" text="1" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-6-2" text="2" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-6-3" text="3" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-6-1" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-6-4" text="4" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-6-5" text="5" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-6-6" text="6" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-6-2" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-6-7" text="7" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-6-8" text="8" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-6-9" text="9" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="cell-border-6" picking-mode="Ignore" class="cell-border"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="cell-0-7" class="board-cell">
+                        <ui:Label name="cell-label-0-7" class="cell-label"/>
+                        <ui:VisualElement name="memo-area-7" picking-mode="Ignore" class="memo-area">
+                            <ui:VisualElement name="memo-row-7-0" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-7-1" text="1" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-7-2" text="2" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-7-3" text="3" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-7-1" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-7-4" text="4" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-7-5" text="5" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-7-6" text="6" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-7-2" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-7-7" text="7" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-7-8" text="8" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-7-9" text="9" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="cell-border-7" picking-mode="Ignore" class="cell-border"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="cell-0-8" class="board-cell">
+                        <ui:Label name="cell-label-0-8" class="cell-label"/>
+                        <ui:VisualElement name="memo-area-8" picking-mode="Ignore" class="memo-area">
+                            <ui:VisualElement name="memo-row-8-0" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-8-1" text="1" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-8-2" text="2" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-8-3" text="3" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-8-1" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-8-4" text="4" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-8-5" text="5" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-8-6" text="6" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-8-2" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-8-7" text="7" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-8-8" text="8" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-8-9" text="9" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="cell-border-8" picking-mode="Ignore" class="cell-border"/>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="row-1" class="board-row">
+                    <ui:VisualElement name="cell-1-0" class="board-cell">
+                        <ui:Label name="cell-label-1-0" class="cell-label"/>
+                        <ui:VisualElement name="memo-area-9" picking-mode="Ignore" class="memo-area">
+                            <ui:VisualElement name="memo-row-9-0" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-9-1" text="1" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-9-2" text="2" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-9-3" text="3" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-9-1" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-9-4" text="4" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-9-5" text="5" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-9-6" text="6" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-9-2" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-9-7" text="7" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-9-8" text="8" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-9-9" text="9" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="cell-border-9" picking-mode="Ignore" class="cell-border"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="cell-1-1" class="board-cell">
+                        <ui:Label name="cell-label-1-1" class="cell-label"/>
+                        <ui:VisualElement name="memo-area-10" picking-mode="Ignore" class="memo-area">
+                            <ui:VisualElement name="memo-row-10-0" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-10-1" text="1" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-10-2" text="2" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-10-3" text="3" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-10-1" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-10-4" text="4" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-10-5" text="5" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-10-6" text="6" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-10-2" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-10-7" text="7" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-10-8" text="8" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-10-9" text="9" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="cell-border-10" picking-mode="Ignore" class="cell-border"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="cell-1-2" class="board-cell">
+                        <ui:Label name="cell-label-1-2" class="cell-label"/>
+                        <ui:VisualElement name="memo-area-11" picking-mode="Ignore" class="memo-area">
+                            <ui:VisualElement name="memo-row-11-0" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-11-1" text="1" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-11-2" text="2" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-11-3" text="3" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-11-1" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-11-4" text="4" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-11-5" text="5" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-11-6" text="6" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-11-2" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-11-7" text="7" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-11-8" text="8" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-11-9" text="9" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="cell-border-11" picking-mode="Ignore" class="cell-border"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="cell-1-3" class="board-cell">
+                        <ui:Label name="cell-label-1-3" class="cell-label"/>
+                        <ui:VisualElement name="memo-area-12" picking-mode="Ignore" class="memo-area">
+                            <ui:VisualElement name="memo-row-12-0" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-12-1" text="1" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-12-2" text="2" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-12-3" text="3" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-12-1" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-12-4" text="4" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-12-5" text="5" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-12-6" text="6" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-12-2" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-12-7" text="7" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-12-8" text="8" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-12-9" text="9" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="cell-border-12" picking-mode="Ignore" class="cell-border"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="cell-1-4" class="board-cell">
+                        <ui:Label name="cell-label-1-4" class="cell-label"/>
+                        <ui:VisualElement name="memo-area-13" picking-mode="Ignore" class="memo-area">
+                            <ui:VisualElement name="memo-row-13-0" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-13-1" text="1" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-13-2" text="2" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-13-3" text="3" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-13-1" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-13-4" text="4" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-13-5" text="5" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-13-6" text="6" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-13-2" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-13-7" text="7" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-13-8" text="8" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-13-9" text="9" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="cell-border-13" picking-mode="Ignore" class="cell-border"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="cell-1-5" class="board-cell">
+                        <ui:Label name="cell-label-1-5" class="cell-label"/>
+                        <ui:VisualElement name="memo-area-14" picking-mode="Ignore" class="memo-area">
+                            <ui:VisualElement name="memo-row-14-0" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-14-1" text="1" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-14-2" text="2" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-14-3" text="3" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-14-1" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-14-4" text="4" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-14-5" text="5" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-14-6" text="6" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-14-2" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-14-7" text="7" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-14-8" text="8" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-14-9" text="9" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="cell-border-14" picking-mode="Ignore" class="cell-border"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="cell-1-6" class="board-cell">
+                        <ui:Label name="cell-label-1-6" class="cell-label"/>
+                        <ui:VisualElement name="memo-area-15" picking-mode="Ignore" class="memo-area">
+                            <ui:VisualElement name="memo-row-15-0" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-15-1" text="1" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-15-2" text="2" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-15-3" text="3" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-15-1" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-15-4" text="4" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-15-5" text="5" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-15-6" text="6" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-15-2" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-15-7" text="7" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-15-8" text="8" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-15-9" text="9" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="cell-border-15" picking-mode="Ignore" class="cell-border"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="cell-1-7" class="board-cell">
+                        <ui:Label name="cell-label-1-7" class="cell-label"/>
+                        <ui:VisualElement name="memo-area-16" picking-mode="Ignore" class="memo-area">
+                            <ui:VisualElement name="memo-row-16-0" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-16-1" text="1" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-16-2" text="2" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-16-3" text="3" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-16-1" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-16-4" text="4" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-16-5" text="5" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-16-6" text="6" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-16-2" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-16-7" text="7" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-16-8" text="8" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-16-9" text="9" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="cell-border-16" picking-mode="Ignore" class="cell-border"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="cell-1-8" class="board-cell">
+                        <ui:Label name="cell-label-1-8" class="cell-label"/>
+                        <ui:VisualElement name="memo-area-17" picking-mode="Ignore" class="memo-area">
+                            <ui:VisualElement name="memo-row-17-0" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-17-1" text="1" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-17-2" text="2" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-17-3" text="3" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-17-1" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-17-4" text="4" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-17-5" text="5" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-17-6" text="6" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-17-2" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-17-7" text="7" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-17-8" text="8" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-17-9" text="9" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="cell-border-17" picking-mode="Ignore" class="cell-border"/>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="row-2" class="board-row">
+                    <ui:VisualElement name="cell-2-0" class="board-cell">
+                        <ui:Label name="cell-label-2-0" class="cell-label"/>
+                        <ui:VisualElement name="memo-area-18" picking-mode="Ignore" class="memo-area">
+                            <ui:VisualElement name="memo-row-18-0" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-18-1" text="1" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-18-2" text="2" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-18-3" text="3" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-18-1" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-18-4" text="4" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-18-5" text="5" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-18-6" text="6" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-18-2" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-18-7" text="7" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-18-8" text="8" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-18-9" text="9" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="cell-border-18" picking-mode="Ignore" class="cell-border"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="cell-2-1" class="board-cell">
+                        <ui:Label name="cell-label-2-1" class="cell-label"/>
+                        <ui:VisualElement name="memo-area-19" picking-mode="Ignore" class="memo-area">
+                            <ui:VisualElement name="memo-row-19-0" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-19-1" text="1" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-19-2" text="2" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-19-3" text="3" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-19-1" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-19-4" text="4" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-19-5" text="5" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-19-6" text="6" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-19-2" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-19-7" text="7" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-19-8" text="8" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-19-9" text="9" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="cell-border-19" picking-mode="Ignore" class="cell-border"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="cell-2-2" class="board-cell">
+                        <ui:Label name="cell-label-2-2" class="cell-label"/>
+                        <ui:VisualElement name="memo-area-20" picking-mode="Ignore" class="memo-area">
+                            <ui:VisualElement name="memo-row-20-0" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-20-1" text="1" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-20-2" text="2" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-20-3" text="3" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-20-1" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-20-4" text="4" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-20-5" text="5" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-20-6" text="6" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-20-2" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-20-7" text="7" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-20-8" text="8" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-20-9" text="9" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="cell-border-20" picking-mode="Ignore" class="cell-border"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="cell-2-3" class="board-cell">
+                        <ui:Label name="cell-label-2-3" class="cell-label"/>
+                        <ui:VisualElement name="memo-area-21" picking-mode="Ignore" class="memo-area">
+                            <ui:VisualElement name="memo-row-21-0" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-21-1" text="1" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-21-2" text="2" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-21-3" text="3" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-21-1" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-21-4" text="4" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-21-5" text="5" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-21-6" text="6" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-21-2" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-21-7" text="7" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-21-8" text="8" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-21-9" text="9" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="cell-border-21" picking-mode="Ignore" class="cell-border"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="cell-2-4" class="board-cell">
+                        <ui:Label name="cell-label-2-4" class="cell-label"/>
+                        <ui:VisualElement name="memo-area-22" picking-mode="Ignore" class="memo-area">
+                            <ui:VisualElement name="memo-row-22-0" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-22-1" text="1" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-22-2" text="2" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-22-3" text="3" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-22-1" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-22-4" text="4" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-22-5" text="5" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-22-6" text="6" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-22-2" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-22-7" text="7" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-22-8" text="8" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-22-9" text="9" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="cell-border-22" picking-mode="Ignore" class="cell-border"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="cell-2-5" class="board-cell">
+                        <ui:Label name="cell-label-2-5" class="cell-label"/>
+                        <ui:VisualElement name="memo-area-23" picking-mode="Ignore" class="memo-area">
+                            <ui:VisualElement name="memo-row-23-0" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-23-1" text="1" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-23-2" text="2" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-23-3" text="3" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-23-1" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-23-4" text="4" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-23-5" text="5" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-23-6" text="6" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-23-2" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-23-7" text="7" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-23-8" text="8" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-23-9" text="9" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="cell-border-23" picking-mode="Ignore" class="cell-border"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="cell-2-6" class="board-cell">
+                        <ui:Label name="cell-label-2-6" class="cell-label"/>
+                        <ui:VisualElement name="memo-area-24" picking-mode="Ignore" class="memo-area">
+                            <ui:VisualElement name="memo-row-24-0" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-24-1" text="1" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-24-2" text="2" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-24-3" text="3" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-24-1" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-24-4" text="4" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-24-5" text="5" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-24-6" text="6" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-24-2" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-24-7" text="7" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-24-8" text="8" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-24-9" text="9" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="cell-border-24" picking-mode="Ignore" class="cell-border"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="cell-2-7" class="board-cell">
+                        <ui:Label name="cell-label-2-7" class="cell-label"/>
+                        <ui:VisualElement name="memo-area-25" picking-mode="Ignore" class="memo-area">
+                            <ui:VisualElement name="memo-row-25-0" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-25-1" text="1" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-25-2" text="2" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-25-3" text="3" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-25-1" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-25-4" text="4" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-25-5" text="5" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-25-6" text="6" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-25-2" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-25-7" text="7" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-25-8" text="8" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-25-9" text="9" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="cell-border-25" picking-mode="Ignore" class="cell-border"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="cell-2-8" class="board-cell">
+                        <ui:Label name="cell-label-2-8" class="cell-label"/>
+                        <ui:VisualElement name="memo-area-26" picking-mode="Ignore" class="memo-area">
+                            <ui:VisualElement name="memo-row-26-0" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-26-1" text="1" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-26-2" text="2" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-26-3" text="3" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-26-1" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-26-4" text="4" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-26-5" text="5" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-26-6" text="6" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-26-2" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-26-7" text="7" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-26-8" text="8" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-26-9" text="9" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="cell-border-26" picking-mode="Ignore" class="cell-border"/>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="row-3" class="board-row">
+                    <ui:VisualElement name="cell-3-0" class="board-cell">
+                        <ui:Label name="cell-label-3-0" class="cell-label"/>
+                        <ui:VisualElement name="memo-area-27" picking-mode="Ignore" class="memo-area">
+                            <ui:VisualElement name="memo-row-27-0" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-27-1" text="1" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-27-2" text="2" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-27-3" text="3" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-27-1" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-27-4" text="4" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-27-5" text="5" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-27-6" text="6" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-27-2" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-27-7" text="7" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-27-8" text="8" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-27-9" text="9" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="cell-border-27" picking-mode="Ignore" class="cell-border"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="cell-3-1" class="board-cell">
+                        <ui:Label name="cell-label-3-1" class="cell-label"/>
+                        <ui:VisualElement name="memo-area-28" picking-mode="Ignore" class="memo-area">
+                            <ui:VisualElement name="memo-row-28-0" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-28-1" text="1" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-28-2" text="2" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-28-3" text="3" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-28-1" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-28-4" text="4" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-28-5" text="5" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-28-6" text="6" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-28-2" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-28-7" text="7" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-28-8" text="8" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-28-9" text="9" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="cell-border-28" picking-mode="Ignore" class="cell-border"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="cell-3-2" class="board-cell">
+                        <ui:Label name="cell-label-3-2" class="cell-label"/>
+                        <ui:VisualElement name="memo-area-29" picking-mode="Ignore" class="memo-area">
+                            <ui:VisualElement name="memo-row-29-0" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-29-1" text="1" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-29-2" text="2" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-29-3" text="3" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-29-1" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-29-4" text="4" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-29-5" text="5" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-29-6" text="6" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-29-2" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-29-7" text="7" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-29-8" text="8" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-29-9" text="9" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="cell-border-29" picking-mode="Ignore" class="cell-border"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="cell-3-3" class="board-cell">
+                        <ui:Label name="cell-label-3-3" class="cell-label"/>
+                        <ui:VisualElement name="memo-area-30" picking-mode="Ignore" class="memo-area">
+                            <ui:VisualElement name="memo-row-30-0" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-30-1" text="1" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-30-2" text="2" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-30-3" text="3" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-30-1" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-30-4" text="4" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-30-5" text="5" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-30-6" text="6" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-30-2" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-30-7" text="7" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-30-8" text="8" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-30-9" text="9" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="cell-border-30" picking-mode="Ignore" class="cell-border"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="cell-3-4" class="board-cell">
+                        <ui:Label name="cell-label-3-4" class="cell-label"/>
+                        <ui:VisualElement name="memo-area-31" picking-mode="Ignore" class="memo-area">
+                            <ui:VisualElement name="memo-row-31-0" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-31-1" text="1" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-31-2" text="2" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-31-3" text="3" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-31-1" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-31-4" text="4" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-31-5" text="5" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-31-6" text="6" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-31-2" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-31-7" text="7" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-31-8" text="8" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-31-9" text="9" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="cell-border-31" picking-mode="Ignore" class="cell-border"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="cell-3-5" class="board-cell">
+                        <ui:Label name="cell-label-3-5" class="cell-label"/>
+                        <ui:VisualElement name="memo-area-32" picking-mode="Ignore" class="memo-area">
+                            <ui:VisualElement name="memo-row-32-0" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-32-1" text="1" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-32-2" text="2" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-32-3" text="3" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-32-1" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-32-4" text="4" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-32-5" text="5" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-32-6" text="6" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-32-2" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-32-7" text="7" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-32-8" text="8" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-32-9" text="9" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="cell-border-32" picking-mode="Ignore" class="cell-border"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="cell-3-6" class="board-cell">
+                        <ui:Label name="cell-label-3-6" class="cell-label"/>
+                        <ui:VisualElement name="memo-area-33" picking-mode="Ignore" class="memo-area">
+                            <ui:VisualElement name="memo-row-33-0" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-33-1" text="1" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-33-2" text="2" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-33-3" text="3" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-33-1" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-33-4" text="4" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-33-5" text="5" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-33-6" text="6" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-33-2" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-33-7" text="7" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-33-8" text="8" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-33-9" text="9" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="cell-border-33" picking-mode="Ignore" class="cell-border"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="cell-3-7" class="board-cell">
+                        <ui:Label name="cell-label-3-7" class="cell-label"/>
+                        <ui:VisualElement name="memo-area-34" picking-mode="Ignore" class="memo-area">
+                            <ui:VisualElement name="memo-row-34-0" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-34-1" text="1" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-34-2" text="2" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-34-3" text="3" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-34-1" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-34-4" text="4" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-34-5" text="5" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-34-6" text="6" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-34-2" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-34-7" text="7" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-34-8" text="8" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-34-9" text="9" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="cell-border-34" picking-mode="Ignore" class="cell-border"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="cell-3-8" class="board-cell">
+                        <ui:Label name="cell-label-3-8" class="cell-label"/>
+                        <ui:VisualElement name="memo-area-35" picking-mode="Ignore" class="memo-area">
+                            <ui:VisualElement name="memo-row-35-0" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-35-1" text="1" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-35-2" text="2" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-35-3" text="3" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-35-1" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-35-4" text="4" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-35-5" text="5" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-35-6" text="6" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-35-2" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-35-7" text="7" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-35-8" text="8" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-35-9" text="9" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="cell-border-35" picking-mode="Ignore" class="cell-border"/>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="row-4" class="board-row">
+                    <ui:VisualElement name="cell-4-0" class="board-cell">
+                        <ui:Label name="cell-label-4-0" class="cell-label"/>
+                        <ui:VisualElement name="memo-area-36" picking-mode="Ignore" class="memo-area">
+                            <ui:VisualElement name="memo-row-36-0" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-36-1" text="1" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-36-2" text="2" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-36-3" text="3" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-36-1" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-36-4" text="4" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-36-5" text="5" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-36-6" text="6" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-36-2" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-36-7" text="7" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-36-8" text="8" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-36-9" text="9" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="cell-border-36" picking-mode="Ignore" class="cell-border"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="cell-4-1" class="board-cell">
+                        <ui:Label name="cell-label-4-1" class="cell-label"/>
+                        <ui:VisualElement name="memo-area-37" picking-mode="Ignore" class="memo-area">
+                            <ui:VisualElement name="memo-row-37-0" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-37-1" text="1" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-37-2" text="2" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-37-3" text="3" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-37-1" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-37-4" text="4" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-37-5" text="5" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-37-6" text="6" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-37-2" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-37-7" text="7" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-37-8" text="8" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-37-9" text="9" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="cell-border-37" picking-mode="Ignore" class="cell-border"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="cell-4-2" class="board-cell">
+                        <ui:Label name="cell-label-4-2" class="cell-label"/>
+                        <ui:VisualElement name="memo-area-38" picking-mode="Ignore" class="memo-area">
+                            <ui:VisualElement name="memo-row-38-0" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-38-1" text="1" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-38-2" text="2" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-38-3" text="3" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-38-1" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-38-4" text="4" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-38-5" text="5" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-38-6" text="6" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-38-2" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-38-7" text="7" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-38-8" text="8" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-38-9" text="9" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="cell-border-38" picking-mode="Ignore" class="cell-border"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="cell-4-3" class="board-cell">
+                        <ui:Label name="cell-label-4-3" class="cell-label"/>
+                        <ui:VisualElement name="memo-area-39" picking-mode="Ignore" class="memo-area">
+                            <ui:VisualElement name="memo-row-39-0" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-39-1" text="1" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-39-2" text="2" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-39-3" text="3" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-39-1" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-39-4" text="4" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-39-5" text="5" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-39-6" text="6" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-39-2" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-39-7" text="7" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-39-8" text="8" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-39-9" text="9" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="cell-border-39" picking-mode="Ignore" class="cell-border"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="cell-4-4" class="board-cell">
+                        <ui:Label name="cell-label-4-4" class="cell-label"/>
+                        <ui:VisualElement name="memo-area-40" picking-mode="Ignore" class="memo-area">
+                            <ui:VisualElement name="memo-row-40-0" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-40-1" text="1" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-40-2" text="2" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-40-3" text="3" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-40-1" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-40-4" text="4" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-40-5" text="5" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-40-6" text="6" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-40-2" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-40-7" text="7" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-40-8" text="8" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-40-9" text="9" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="cell-border-40" picking-mode="Ignore" class="cell-border"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="cell-4-5" class="board-cell">
+                        <ui:Label name="cell-label-4-5" class="cell-label"/>
+                        <ui:VisualElement name="memo-area-41" picking-mode="Ignore" class="memo-area">
+                            <ui:VisualElement name="memo-row-41-0" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-41-1" text="1" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-41-2" text="2" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-41-3" text="3" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-41-1" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-41-4" text="4" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-41-5" text="5" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-41-6" text="6" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-41-2" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-41-7" text="7" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-41-8" text="8" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-41-9" text="9" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="cell-border-41" picking-mode="Ignore" class="cell-border"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="cell-4-6" class="board-cell">
+                        <ui:Label name="cell-label-4-6" class="cell-label"/>
+                        <ui:VisualElement name="memo-area-42" picking-mode="Ignore" class="memo-area">
+                            <ui:VisualElement name="memo-row-42-0" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-42-1" text="1" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-42-2" text="2" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-42-3" text="3" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-42-1" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-42-4" text="4" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-42-5" text="5" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-42-6" text="6" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-42-2" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-42-7" text="7" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-42-8" text="8" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-42-9" text="9" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="cell-border-42" picking-mode="Ignore" class="cell-border"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="cell-4-7" class="board-cell">
+                        <ui:Label name="cell-label-4-7" class="cell-label"/>
+                        <ui:VisualElement name="memo-area-43" picking-mode="Ignore" class="memo-area">
+                            <ui:VisualElement name="memo-row-43-0" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-43-1" text="1" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-43-2" text="2" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-43-3" text="3" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-43-1" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-43-4" text="4" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-43-5" text="5" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-43-6" text="6" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-43-2" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-43-7" text="7" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-43-8" text="8" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-43-9" text="9" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="cell-border-43" picking-mode="Ignore" class="cell-border"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="cell-4-8" class="board-cell">
+                        <ui:Label name="cell-label-4-8" class="cell-label"/>
+                        <ui:VisualElement name="memo-area-44" picking-mode="Ignore" class="memo-area">
+                            <ui:VisualElement name="memo-row-44-0" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-44-1" text="1" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-44-2" text="2" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-44-3" text="3" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-44-1" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-44-4" text="4" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-44-5" text="5" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-44-6" text="6" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-44-2" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-44-7" text="7" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-44-8" text="8" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-44-9" text="9" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="cell-border-44" picking-mode="Ignore" class="cell-border"/>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="row-5" class="board-row">
+                    <ui:VisualElement name="cell-5-0" class="board-cell">
+                        <ui:Label name="cell-label-5-0" class="cell-label"/>
+                        <ui:VisualElement name="memo-area-45" picking-mode="Ignore" class="memo-area">
+                            <ui:VisualElement name="memo-row-45-0" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-45-1" text="1" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-45-2" text="2" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-45-3" text="3" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-45-1" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-45-4" text="4" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-45-5" text="5" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-45-6" text="6" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-45-2" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-45-7" text="7" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-45-8" text="8" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-45-9" text="9" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="cell-border-45" picking-mode="Ignore" class="cell-border"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="cell-5-1" class="board-cell">
+                        <ui:Label name="cell-label-5-1" class="cell-label"/>
+                        <ui:VisualElement name="memo-area-46" picking-mode="Ignore" class="memo-area">
+                            <ui:VisualElement name="memo-row-46-0" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-46-1" text="1" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-46-2" text="2" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-46-3" text="3" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-46-1" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-46-4" text="4" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-46-5" text="5" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-46-6" text="6" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-46-2" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-46-7" text="7" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-46-8" text="8" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-46-9" text="9" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="cell-border-46" picking-mode="Ignore" class="cell-border"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="cell-5-2" class="board-cell">
+                        <ui:Label name="cell-label-5-2" class="cell-label"/>
+                        <ui:VisualElement name="memo-area-47" picking-mode="Ignore" class="memo-area">
+                            <ui:VisualElement name="memo-row-47-0" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-47-1" text="1" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-47-2" text="2" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-47-3" text="3" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-47-1" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-47-4" text="4" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-47-5" text="5" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-47-6" text="6" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-47-2" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-47-7" text="7" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-47-8" text="8" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-47-9" text="9" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="cell-border-47" picking-mode="Ignore" class="cell-border"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="cell-5-3" class="board-cell">
+                        <ui:Label name="cell-label-5-3" class="cell-label"/>
+                        <ui:VisualElement name="memo-area-48" picking-mode="Ignore" class="memo-area">
+                            <ui:VisualElement name="memo-row-48-0" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-48-1" text="1" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-48-2" text="2" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-48-3" text="3" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-48-1" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-48-4" text="4" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-48-5" text="5" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-48-6" text="6" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-48-2" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-48-7" text="7" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-48-8" text="8" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-48-9" text="9" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="cell-border-48" picking-mode="Ignore" class="cell-border"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="cell-5-4" class="board-cell">
+                        <ui:Label name="cell-label-5-4" class="cell-label"/>
+                        <ui:VisualElement name="memo-area-49" picking-mode="Ignore" class="memo-area">
+                            <ui:VisualElement name="memo-row-49-0" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-49-1" text="1" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-49-2" text="2" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-49-3" text="3" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-49-1" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-49-4" text="4" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-49-5" text="5" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-49-6" text="6" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-49-2" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-49-7" text="7" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-49-8" text="8" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-49-9" text="9" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="cell-border-49" picking-mode="Ignore" class="cell-border"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="cell-5-5" class="board-cell">
+                        <ui:Label name="cell-label-5-5" class="cell-label"/>
+                        <ui:VisualElement name="memo-area-50" picking-mode="Ignore" class="memo-area">
+                            <ui:VisualElement name="memo-row-50-0" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-50-1" text="1" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-50-2" text="2" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-50-3" text="3" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-50-1" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-50-4" text="4" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-50-5" text="5" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-50-6" text="6" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-50-2" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-50-7" text="7" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-50-8" text="8" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-50-9" text="9" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="cell-border-50" picking-mode="Ignore" class="cell-border"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="cell-5-6" class="board-cell">
+                        <ui:Label name="cell-label-5-6" class="cell-label"/>
+                        <ui:VisualElement name="memo-area-51" picking-mode="Ignore" class="memo-area">
+                            <ui:VisualElement name="memo-row-51-0" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-51-1" text="1" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-51-2" text="2" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-51-3" text="3" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-51-1" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-51-4" text="4" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-51-5" text="5" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-51-6" text="6" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-51-2" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-51-7" text="7" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-51-8" text="8" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-51-9" text="9" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="cell-border-51" picking-mode="Ignore" class="cell-border"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="cell-5-7" class="board-cell">
+                        <ui:Label name="cell-label-5-7" class="cell-label"/>
+                        <ui:VisualElement name="memo-area-52" picking-mode="Ignore" class="memo-area">
+                            <ui:VisualElement name="memo-row-52-0" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-52-1" text="1" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-52-2" text="2" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-52-3" text="3" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-52-1" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-52-4" text="4" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-52-5" text="5" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-52-6" text="6" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-52-2" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-52-7" text="7" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-52-8" text="8" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-52-9" text="9" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="cell-border-52" picking-mode="Ignore" class="cell-border"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="cell-5-8" class="board-cell">
+                        <ui:Label name="cell-label-5-8" class="cell-label"/>
+                        <ui:VisualElement name="memo-area-53" picking-mode="Ignore" class="memo-area">
+                            <ui:VisualElement name="memo-row-53-0" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-53-1" text="1" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-53-2" text="2" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-53-3" text="3" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-53-1" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-53-4" text="4" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-53-5" text="5" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-53-6" text="6" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-53-2" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-53-7" text="7" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-53-8" text="8" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-53-9" text="9" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="cell-border-53" picking-mode="Ignore" class="cell-border"/>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="row-6" class="board-row">
+                    <ui:VisualElement name="cell-6-0" class="board-cell">
+                        <ui:Label name="cell-label-6-0" class="cell-label"/>
+                        <ui:VisualElement name="memo-area-54" picking-mode="Ignore" class="memo-area">
+                            <ui:VisualElement name="memo-row-54-0" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-54-1" text="1" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-54-2" text="2" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-54-3" text="3" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-54-1" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-54-4" text="4" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-54-5" text="5" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-54-6" text="6" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-54-2" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-54-7" text="7" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-54-8" text="8" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-54-9" text="9" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="cell-border-54" picking-mode="Ignore" class="cell-border"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="cell-6-1" class="board-cell">
+                        <ui:Label name="cell-label-6-1" class="cell-label"/>
+                        <ui:VisualElement name="memo-area-55" picking-mode="Ignore" class="memo-area">
+                            <ui:VisualElement name="memo-row-55-0" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-55-1" text="1" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-55-2" text="2" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-55-3" text="3" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-55-1" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-55-4" text="4" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-55-5" text="5" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-55-6" text="6" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-55-2" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-55-7" text="7" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-55-8" text="8" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-55-9" text="9" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="cell-border-55" picking-mode="Ignore" class="cell-border"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="cell-6-2" class="board-cell">
+                        <ui:Label name="cell-label-6-2" class="cell-label"/>
+                        <ui:VisualElement name="memo-area-56" picking-mode="Ignore" class="memo-area">
+                            <ui:VisualElement name="memo-row-56-0" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-56-1" text="1" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-56-2" text="2" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-56-3" text="3" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-56-1" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-56-4" text="4" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-56-5" text="5" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-56-6" text="6" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-56-2" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-56-7" text="7" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-56-8" text="8" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-56-9" text="9" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="cell-border-56" picking-mode="Ignore" class="cell-border"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="cell-6-3" class="board-cell">
+                        <ui:Label name="cell-label-6-3" class="cell-label"/>
+                        <ui:VisualElement name="memo-area-57" picking-mode="Ignore" class="memo-area">
+                            <ui:VisualElement name="memo-row-57-0" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-57-1" text="1" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-57-2" text="2" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-57-3" text="3" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-57-1" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-57-4" text="4" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-57-5" text="5" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-57-6" text="6" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-57-2" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-57-7" text="7" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-57-8" text="8" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-57-9" text="9" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="cell-border-57" picking-mode="Ignore" class="cell-border"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="cell-6-4" class="board-cell">
+                        <ui:Label name="cell-label-6-4" class="cell-label"/>
+                        <ui:VisualElement name="memo-area-58" picking-mode="Ignore" class="memo-area">
+                            <ui:VisualElement name="memo-row-58-0" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-58-1" text="1" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-58-2" text="2" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-58-3" text="3" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-58-1" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-58-4" text="4" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-58-5" text="5" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-58-6" text="6" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-58-2" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-58-7" text="7" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-58-8" text="8" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-58-9" text="9" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="cell-border-58" picking-mode="Ignore" class="cell-border"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="cell-6-5" class="board-cell">
+                        <ui:Label name="cell-label-6-5" class="cell-label"/>
+                        <ui:VisualElement name="memo-area-59" picking-mode="Ignore" class="memo-area">
+                            <ui:VisualElement name="memo-row-59-0" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-59-1" text="1" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-59-2" text="2" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-59-3" text="3" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-59-1" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-59-4" text="4" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-59-5" text="5" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-59-6" text="6" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-59-2" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-59-7" text="7" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-59-8" text="8" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-59-9" text="9" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="cell-border-59" picking-mode="Ignore" class="cell-border"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="cell-6-6" class="board-cell">
+                        <ui:Label name="cell-label-6-6" class="cell-label"/>
+                        <ui:VisualElement name="memo-area-60" picking-mode="Ignore" class="memo-area">
+                            <ui:VisualElement name="memo-row-60-0" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-60-1" text="1" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-60-2" text="2" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-60-3" text="3" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-60-1" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-60-4" text="4" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-60-5" text="5" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-60-6" text="6" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-60-2" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-60-7" text="7" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-60-8" text="8" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-60-9" text="9" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="cell-border-60" picking-mode="Ignore" class="cell-border"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="cell-6-7" class="board-cell">
+                        <ui:Label name="cell-label-6-7" class="cell-label"/>
+                        <ui:VisualElement name="memo-area-61" picking-mode="Ignore" class="memo-area">
+                            <ui:VisualElement name="memo-row-61-0" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-61-1" text="1" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-61-2" text="2" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-61-3" text="3" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-61-1" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-61-4" text="4" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-61-5" text="5" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-61-6" text="6" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-61-2" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-61-7" text="7" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-61-8" text="8" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-61-9" text="9" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="cell-border-61" picking-mode="Ignore" class="cell-border"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="cell-6-8" class="board-cell">
+                        <ui:Label name="cell-label-6-8" class="cell-label"/>
+                        <ui:VisualElement name="memo-area-62" picking-mode="Ignore" class="memo-area">
+                            <ui:VisualElement name="memo-row-62-0" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-62-1" text="1" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-62-2" text="2" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-62-3" text="3" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-62-1" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-62-4" text="4" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-62-5" text="5" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-62-6" text="6" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-62-2" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-62-7" text="7" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-62-8" text="8" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-62-9" text="9" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="cell-border-62" picking-mode="Ignore" class="cell-border"/>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="row-7" class="board-row">
+                    <ui:VisualElement name="cell-7-0" class="board-cell">
+                        <ui:Label name="cell-label-7-0" class="cell-label"/>
+                        <ui:VisualElement name="memo-area-63" picking-mode="Ignore" class="memo-area">
+                            <ui:VisualElement name="memo-row-63-0" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-63-1" text="1" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-63-2" text="2" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-63-3" text="3" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-63-1" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-63-4" text="4" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-63-5" text="5" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-63-6" text="6" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-63-2" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-63-7" text="7" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-63-8" text="8" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-63-9" text="9" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="cell-border-63" picking-mode="Ignore" class="cell-border"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="cell-7-1" class="board-cell">
+                        <ui:Label name="cell-label-7-1" class="cell-label"/>
+                        <ui:VisualElement name="memo-area-64" picking-mode="Ignore" class="memo-area">
+                            <ui:VisualElement name="memo-row-64-0" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-64-1" text="1" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-64-2" text="2" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-64-3" text="3" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-64-1" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-64-4" text="4" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-64-5" text="5" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-64-6" text="6" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-64-2" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-64-7" text="7" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-64-8" text="8" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-64-9" text="9" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="cell-border-64" picking-mode="Ignore" class="cell-border"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="cell-7-2" class="board-cell">
+                        <ui:Label name="cell-label-7-2" class="cell-label"/>
+                        <ui:VisualElement name="memo-area-65" picking-mode="Ignore" class="memo-area">
+                            <ui:VisualElement name="memo-row-65-0" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-65-1" text="1" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-65-2" text="2" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-65-3" text="3" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-65-1" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-65-4" text="4" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-65-5" text="5" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-65-6" text="6" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-65-2" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-65-7" text="7" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-65-8" text="8" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-65-9" text="9" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="cell-border-65" picking-mode="Ignore" class="cell-border"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="cell-7-3" class="board-cell">
+                        <ui:Label name="cell-label-7-3" class="cell-label"/>
+                        <ui:VisualElement name="memo-area-66" picking-mode="Ignore" class="memo-area">
+                            <ui:VisualElement name="memo-row-66-0" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-66-1" text="1" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-66-2" text="2" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-66-3" text="3" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-66-1" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-66-4" text="4" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-66-5" text="5" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-66-6" text="6" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-66-2" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-66-7" text="7" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-66-8" text="8" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-66-9" text="9" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="cell-border-66" picking-mode="Ignore" class="cell-border"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="cell-7-4" class="board-cell">
+                        <ui:Label name="cell-label-7-4" class="cell-label"/>
+                        <ui:VisualElement name="memo-area-67" picking-mode="Ignore" class="memo-area">
+                            <ui:VisualElement name="memo-row-67-0" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-67-1" text="1" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-67-2" text="2" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-67-3" text="3" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-67-1" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-67-4" text="4" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-67-5" text="5" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-67-6" text="6" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-67-2" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-67-7" text="7" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-67-8" text="8" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-67-9" text="9" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="cell-border-67" picking-mode="Ignore" class="cell-border"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="cell-7-5" class="board-cell">
+                        <ui:Label name="cell-label-7-5" class="cell-label"/>
+                        <ui:VisualElement name="memo-area-68" picking-mode="Ignore" class="memo-area">
+                            <ui:VisualElement name="memo-row-68-0" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-68-1" text="1" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-68-2" text="2" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-68-3" text="3" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-68-1" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-68-4" text="4" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-68-5" text="5" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-68-6" text="6" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-68-2" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-68-7" text="7" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-68-8" text="8" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-68-9" text="9" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="cell-border-68" picking-mode="Ignore" class="cell-border"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="cell-7-6" class="board-cell">
+                        <ui:Label name="cell-label-7-6" class="cell-label"/>
+                        <ui:VisualElement name="memo-area-69" picking-mode="Ignore" class="memo-area">
+                            <ui:VisualElement name="memo-row-69-0" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-69-1" text="1" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-69-2" text="2" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-69-3" text="3" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-69-1" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-69-4" text="4" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-69-5" text="5" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-69-6" text="6" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-69-2" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-69-7" text="7" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-69-8" text="8" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-69-9" text="9" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="cell-border-69" picking-mode="Ignore" class="cell-border"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="cell-7-7" class="board-cell">
+                        <ui:Label name="cell-label-7-7" class="cell-label"/>
+                        <ui:VisualElement name="memo-area-70" picking-mode="Ignore" class="memo-area">
+                            <ui:VisualElement name="memo-row-70-0" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-70-1" text="1" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-70-2" text="2" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-70-3" text="3" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-70-1" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-70-4" text="4" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-70-5" text="5" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-70-6" text="6" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-70-2" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-70-7" text="7" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-70-8" text="8" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-70-9" text="9" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="cell-border-70" picking-mode="Ignore" class="cell-border"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="cell-7-8" class="board-cell">
+                        <ui:Label name="cell-label-7-8" class="cell-label"/>
+                        <ui:VisualElement name="memo-area-71" picking-mode="Ignore" class="memo-area">
+                            <ui:VisualElement name="memo-row-71-0" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-71-1" text="1" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-71-2" text="2" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-71-3" text="3" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-71-1" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-71-4" text="4" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-71-5" text="5" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-71-6" text="6" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-71-2" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-71-7" text="7" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-71-8" text="8" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-71-9" text="9" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="cell-border-71" picking-mode="Ignore" class="cell-border"/>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="row-8" class="board-row">
+                    <ui:VisualElement name="cell-8-0" class="board-cell">
+                        <ui:Label name="cell-label-8-0" class="cell-label"/>
+                        <ui:VisualElement name="memo-area-72" picking-mode="Ignore" class="memo-area">
+                            <ui:VisualElement name="memo-row-72-0" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-72-1" text="1" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-72-2" text="2" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-72-3" text="3" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-72-1" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-72-4" text="4" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-72-5" text="5" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-72-6" text="6" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-72-2" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-72-7" text="7" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-72-8" text="8" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-72-9" text="9" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="cell-border-72" picking-mode="Ignore" class="cell-border"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="cell-8-1" class="board-cell">
+                        <ui:Label name="cell-label-8-1" class="cell-label"/>
+                        <ui:VisualElement name="memo-area-73" picking-mode="Ignore" class="memo-area">
+                            <ui:VisualElement name="memo-row-73-0" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-73-1" text="1" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-73-2" text="2" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-73-3" text="3" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-73-1" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-73-4" text="4" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-73-5" text="5" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-73-6" text="6" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-73-2" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-73-7" text="7" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-73-8" text="8" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-73-9" text="9" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="cell-border-73" picking-mode="Ignore" class="cell-border"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="cell-8-2" class="board-cell">
+                        <ui:Label name="cell-label-8-2" class="cell-label"/>
+                        <ui:VisualElement name="memo-area-74" picking-mode="Ignore" class="memo-area">
+                            <ui:VisualElement name="memo-row-74-0" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-74-1" text="1" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-74-2" text="2" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-74-3" text="3" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-74-1" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-74-4" text="4" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-74-5" text="5" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-74-6" text="6" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-74-2" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-74-7" text="7" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-74-8" text="8" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-74-9" text="9" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="cell-border-74" picking-mode="Ignore" class="cell-border"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="cell-8-3" class="board-cell">
+                        <ui:Label name="cell-label-8-3" class="cell-label"/>
+                        <ui:VisualElement name="memo-area-75" picking-mode="Ignore" class="memo-area">
+                            <ui:VisualElement name="memo-row-75-0" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-75-1" text="1" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-75-2" text="2" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-75-3" text="3" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-75-1" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-75-4" text="4" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-75-5" text="5" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-75-6" text="6" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-75-2" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-75-7" text="7" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-75-8" text="8" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-75-9" text="9" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="cell-border-75" picking-mode="Ignore" class="cell-border"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="cell-8-4" class="board-cell">
+                        <ui:Label name="cell-label-8-4" class="cell-label"/>
+                        <ui:VisualElement name="memo-area-76" picking-mode="Ignore" class="memo-area">
+                            <ui:VisualElement name="memo-row-76-0" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-76-1" text="1" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-76-2" text="2" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-76-3" text="3" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-76-1" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-76-4" text="4" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-76-5" text="5" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-76-6" text="6" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-76-2" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-76-7" text="7" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-76-8" text="8" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-76-9" text="9" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="cell-border-76" picking-mode="Ignore" class="cell-border"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="cell-8-5" class="board-cell">
+                        <ui:Label name="cell-label-8-5" class="cell-label"/>
+                        <ui:VisualElement name="memo-area-77" picking-mode="Ignore" class="memo-area">
+                            <ui:VisualElement name="memo-row-77-0" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-77-1" text="1" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-77-2" text="2" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-77-3" text="3" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-77-1" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-77-4" text="4" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-77-5" text="5" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-77-6" text="6" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-77-2" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-77-7" text="7" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-77-8" text="8" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-77-9" text="9" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="cell-border-77" picking-mode="Ignore" class="cell-border"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="cell-8-6" class="board-cell">
+                        <ui:Label name="cell-label-8-6" class="cell-label"/>
+                        <ui:VisualElement name="memo-area-78" picking-mode="Ignore" class="memo-area">
+                            <ui:VisualElement name="memo-row-78-0" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-78-1" text="1" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-78-2" text="2" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-78-3" text="3" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-78-1" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-78-4" text="4" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-78-5" text="5" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-78-6" text="6" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-78-2" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-78-7" text="7" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-78-8" text="8" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-78-9" text="9" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="cell-border-78" picking-mode="Ignore" class="cell-border"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="cell-8-7" class="board-cell">
+                        <ui:Label name="cell-label-8-7" class="cell-label"/>
+                        <ui:VisualElement name="memo-area-79" picking-mode="Ignore" class="memo-area">
+                            <ui:VisualElement name="memo-row-79-0" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-79-1" text="1" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-79-2" text="2" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-79-3" text="3" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-79-1" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-79-4" text="4" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-79-5" text="5" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-79-6" text="6" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-79-2" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-79-7" text="7" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-79-8" text="8" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-79-9" text="9" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="cell-border-79" picking-mode="Ignore" class="cell-border"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="cell-8-8" class="board-cell">
+                        <ui:Label name="cell-label-8-8" class="cell-label"/>
+                        <ui:VisualElement name="memo-area-80" picking-mode="Ignore" class="memo-area">
+                            <ui:VisualElement name="memo-row-80-0" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-80-1" text="1" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-80-2" text="2" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-80-3" text="3" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-80-1" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-80-4" text="4" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-80-5" text="5" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-80-6" text="6" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="memo-row-80-2" picking-mode="Ignore" class="memo-row">
+                                <ui:Label name="memo-label-80-7" text="7" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-80-8" text="8" picking-mode="Ignore" class="memo-label"/>
+                                <ui:Label name="memo-label-80-9" text="9" picking-mode="Ignore" class="memo-label"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="cell-border-80" picking-mode="Ignore" class="cell-border"/>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="region-border-layer" picking-mode="Ignore" class="region-border-layer">
+                    <ui:VisualElement name="region-border-0" picking-mode="Ignore" class="region-border" style="left: 0px; top: 0px;"/>
+                    <ui:VisualElement name="region-border-1" picking-mode="Ignore" class="region-border" style="left: 106px; top: 0px;"/>
+                    <ui:VisualElement name="region-border-2" picking-mode="Ignore" class="region-border border-right-region" style="left: 212px; top: 0px;"/>
+                    <ui:VisualElement name="region-border-3" picking-mode="Ignore" class="region-border" style="left: 318px; top: 0px;"/>
+                    <ui:VisualElement name="region-border-4" picking-mode="Ignore" class="region-border" style="left: 424px; top: 0px;"/>
+                    <ui:VisualElement name="region-border-5" picking-mode="Ignore" class="region-border border-right-region" style="left: 530px; top: 0px;"/>
+                    <ui:VisualElement name="region-border-6" picking-mode="Ignore" class="region-border" style="left: 636px; top: 0px;"/>
+                    <ui:VisualElement name="region-border-7" picking-mode="Ignore" class="region-border" style="left: 742px; top: 0px;"/>
+                    <ui:VisualElement name="region-border-8" picking-mode="Ignore" class="region-border" style="left: 848px; top: 0px;"/>
+                    <ui:VisualElement name="region-border-9" picking-mode="Ignore" class="region-border" style="left: 0px; top: 106px;"/>
+                    <ui:VisualElement name="region-border-10" picking-mode="Ignore" class="region-border" style="left: 106px; top: 106px;"/>
+                    <ui:VisualElement name="region-border-11" picking-mode="Ignore" class="region-border border-right-region" style="left: 212px; top: 106px;"/>
+                    <ui:VisualElement name="region-border-12" picking-mode="Ignore" class="region-border" style="left: 318px; top: 106px;"/>
+                    <ui:VisualElement name="region-border-13" picking-mode="Ignore" class="region-border" style="left: 424px; top: 106px;"/>
+                    <ui:VisualElement name="region-border-14" picking-mode="Ignore" class="region-border border-right-region" style="left: 530px; top: 106px;"/>
+                    <ui:VisualElement name="region-border-15" picking-mode="Ignore" class="region-border" style="left: 636px; top: 106px;"/>
+                    <ui:VisualElement name="region-border-16" picking-mode="Ignore" class="region-border" style="left: 742px; top: 106px;"/>
+                    <ui:VisualElement name="region-border-17" picking-mode="Ignore" class="region-border" style="left: 848px; top: 106px;"/>
+                    <ui:VisualElement name="region-border-18" picking-mode="Ignore" class="region-border border-bottom-region" style="left: 0px; top: 212px;"/>
+                    <ui:VisualElement name="region-border-19" picking-mode="Ignore" class="region-border border-bottom-region" style="left: 106px; top: 212px;"/>
+                    <ui:VisualElement name="region-border-20" picking-mode="Ignore" class="region-border border-bottom-region border-right-region" style="left: 212px; top: 212px;"/>
+                    <ui:VisualElement name="region-border-21" picking-mode="Ignore" class="region-border border-bottom-region" style="left: 318px; top: 212px;"/>
+                    <ui:VisualElement name="region-border-22" picking-mode="Ignore" class="region-border border-bottom-region" style="left: 424px; top: 212px;"/>
+                    <ui:VisualElement name="region-border-23" picking-mode="Ignore" class="region-border border-bottom-region border-right-region" style="left: 530px; top: 212px;"/>
+                    <ui:VisualElement name="region-border-24" picking-mode="Ignore" class="region-border border-bottom-region" style="left: 636px; top: 212px;"/>
+                    <ui:VisualElement name="region-border-25" picking-mode="Ignore" class="region-border border-bottom-region" style="left: 742px; top: 212px;"/>
+                    <ui:VisualElement name="region-border-26" picking-mode="Ignore" class="region-border border-bottom-region" style="left: 848px; top: 212px;"/>
+                    <ui:VisualElement name="region-border-27" picking-mode="Ignore" class="region-border" style="left: 0px; top: 318px;"/>
+                    <ui:VisualElement name="region-border-28" picking-mode="Ignore" class="region-border" style="left: 106px; top: 318px;"/>
+                    <ui:VisualElement name="region-border-29" picking-mode="Ignore" class="region-border border-right-region" style="left: 212px; top: 318px;"/>
+                    <ui:VisualElement name="region-border-30" picking-mode="Ignore" class="region-border" style="left: 318px; top: 318px;"/>
+                    <ui:VisualElement name="region-border-31" picking-mode="Ignore" class="region-border" style="left: 424px; top: 318px;"/>
+                    <ui:VisualElement name="region-border-32" picking-mode="Ignore" class="region-border border-right-region" style="left: 530px; top: 318px;"/>
+                    <ui:VisualElement name="region-border-33" picking-mode="Ignore" class="region-border" style="left: 636px; top: 318px;"/>
+                    <ui:VisualElement name="region-border-34" picking-mode="Ignore" class="region-border" style="left: 742px; top: 318px;"/>
+                    <ui:VisualElement name="region-border-35" picking-mode="Ignore" class="region-border" style="left: 848px; top: 318px;"/>
+                    <ui:VisualElement name="region-border-36" picking-mode="Ignore" class="region-border" style="left: 0px; top: 424px;"/>
+                    <ui:VisualElement name="region-border-37" picking-mode="Ignore" class="region-border" style="left: 106px; top: 424px;"/>
+                    <ui:VisualElement name="region-border-38" picking-mode="Ignore" class="region-border border-right-region" style="left: 212px; top: 424px;"/>
+                    <ui:VisualElement name="region-border-39" picking-mode="Ignore" class="region-border" style="left: 318px; top: 424px;"/>
+                    <ui:VisualElement name="region-border-40" picking-mode="Ignore" class="region-border" style="left: 424px; top: 424px;"/>
+                    <ui:VisualElement name="region-border-41" picking-mode="Ignore" class="region-border border-right-region" style="left: 530px; top: 424px;"/>
+                    <ui:VisualElement name="region-border-42" picking-mode="Ignore" class="region-border" style="left: 636px; top: 424px;"/>
+                    <ui:VisualElement name="region-border-43" picking-mode="Ignore" class="region-border" style="left: 742px; top: 424px;"/>
+                    <ui:VisualElement name="region-border-44" picking-mode="Ignore" class="region-border" style="left: 848px; top: 424px;"/>
+                    <ui:VisualElement name="region-border-45" picking-mode="Ignore" class="region-border border-bottom-region" style="left: 0px; top: 530px;"/>
+                    <ui:VisualElement name="region-border-46" picking-mode="Ignore" class="region-border border-bottom-region" style="left: 106px; top: 530px;"/>
+                    <ui:VisualElement name="region-border-47" picking-mode="Ignore" class="region-border border-bottom-region border-right-region" style="left: 212px; top: 530px;"/>
+                    <ui:VisualElement name="region-border-48" picking-mode="Ignore" class="region-border border-bottom-region" style="left: 318px; top: 530px;"/>
+                    <ui:VisualElement name="region-border-49" picking-mode="Ignore" class="region-border border-bottom-region" style="left: 424px; top: 530px;"/>
+                    <ui:VisualElement name="region-border-50" picking-mode="Ignore" class="region-border border-bottom-region border-right-region" style="left: 530px; top: 530px;"/>
+                    <ui:VisualElement name="region-border-51" picking-mode="Ignore" class="region-border border-bottom-region" style="left: 636px; top: 530px;"/>
+                    <ui:VisualElement name="region-border-52" picking-mode="Ignore" class="region-border border-bottom-region" style="left: 742px; top: 530px;"/>
+                    <ui:VisualElement name="region-border-53" picking-mode="Ignore" class="region-border border-bottom-region" style="left: 848px; top: 530px;"/>
+                    <ui:VisualElement name="region-border-54" picking-mode="Ignore" class="region-border" style="left: 0px; top: 636px;"/>
+                    <ui:VisualElement name="region-border-55" picking-mode="Ignore" class="region-border" style="left: 106px; top: 636px;"/>
+                    <ui:VisualElement name="region-border-56" picking-mode="Ignore" class="region-border border-right-region" style="left: 212px; top: 636px;"/>
+                    <ui:VisualElement name="region-border-57" picking-mode="Ignore" class="region-border" style="left: 318px; top: 636px;"/>
+                    <ui:VisualElement name="region-border-58" picking-mode="Ignore" class="region-border" style="left: 424px; top: 636px;"/>
+                    <ui:VisualElement name="region-border-59" picking-mode="Ignore" class="region-border border-right-region" style="left: 530px; top: 636px;"/>
+                    <ui:VisualElement name="region-border-60" picking-mode="Ignore" class="region-border" style="left: 636px; top: 636px;"/>
+                    <ui:VisualElement name="region-border-61" picking-mode="Ignore" class="region-border" style="left: 742px; top: 636px;"/>
+                    <ui:VisualElement name="region-border-62" picking-mode="Ignore" class="region-border" style="left: 848px; top: 636px;"/>
+                    <ui:VisualElement name="region-border-63" picking-mode="Ignore" class="region-border" style="left: 0px; top: 742px;"/>
+                    <ui:VisualElement name="region-border-64" picking-mode="Ignore" class="region-border" style="left: 106px; top: 742px;"/>
+                    <ui:VisualElement name="region-border-65" picking-mode="Ignore" class="region-border border-right-region" style="left: 212px; top: 742px;"/>
+                    <ui:VisualElement name="region-border-66" picking-mode="Ignore" class="region-border" style="left: 318px; top: 742px;"/>
+                    <ui:VisualElement name="region-border-67" picking-mode="Ignore" class="region-border" style="left: 424px; top: 742px;"/>
+                    <ui:VisualElement name="region-border-68" picking-mode="Ignore" class="region-border border-right-region" style="left: 530px; top: 742px;"/>
+                    <ui:VisualElement name="region-border-69" picking-mode="Ignore" class="region-border" style="left: 636px; top: 742px;"/>
+                    <ui:VisualElement name="region-border-70" picking-mode="Ignore" class="region-border" style="left: 742px; top: 742px;"/>
+                    <ui:VisualElement name="region-border-71" picking-mode="Ignore" class="region-border" style="left: 848px; top: 742px;"/>
+                    <ui:VisualElement name="region-border-72" picking-mode="Ignore" class="region-border" style="left: 0px; top: 848px;"/>
+                    <ui:VisualElement name="region-border-73" picking-mode="Ignore" class="region-border" style="left: 106px; top: 848px;"/>
+                    <ui:VisualElement name="region-border-74" picking-mode="Ignore" class="region-border border-right-region" style="left: 212px; top: 848px;"/>
+                    <ui:VisualElement name="region-border-75" picking-mode="Ignore" class="region-border" style="left: 318px; top: 848px;"/>
+                    <ui:VisualElement name="region-border-76" picking-mode="Ignore" class="region-border" style="left: 424px; top: 848px;"/>
+                    <ui:VisualElement name="region-border-77" picking-mode="Ignore" class="region-border border-right-region" style="left: 530px; top: 848px;"/>
+                    <ui:VisualElement name="region-border-78" picking-mode="Ignore" class="region-border" style="left: 636px; top: 848px;"/>
+                    <ui:VisualElement name="region-border-79" picking-mode="Ignore" class="region-border" style="left: 742px; top: 848px;"/>
+                    <ui:VisualElement name="region-border-80" picking-mode="Ignore" class="region-border" style="left: 848px; top: 848px;"/>
+                </ui:VisualElement>
+                <ui:VisualElement name="board-outer-border" picking-mode="Ignore" class="board-outer-border"/>
             </ui:VisualElement>
         </ui:VisualElement>
-        <ui:VisualElement name="bottom-number-pad-space" class="control-space bottom-control-space" picking-mode="Ignore" />
+        <ui:VisualElement name="bottom-number-pad-space" picking-mode="Ignore" class="control-space bottom-control-space"/>
     </ui:VisualElement>
 </ui:UXML>
+
+

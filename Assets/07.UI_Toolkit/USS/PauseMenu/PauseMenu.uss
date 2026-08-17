@@ -1,0 +1,77 @@
+:root {
+    --pause-panel-color: rgb(242, 241, 237);
+    --pause-button-color: rgb(250, 249, 245);
+    --pause-button-hover-color: rgb(220, 219, 215);
+    --pause-button-pressed-color: rgb(142, 141, 137);
+    --pause-line-color: rgb(48, 48, 46);
+    --pause-line-width: 5px;
+}
+
+.pause-menu-canvas {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.pause-menu-panel {
+    width: 720px;
+    height: 660px;
+    padding-top: 60px;
+    padding-right: 60px;
+    padding-bottom: 60px;
+    padding-left: 60px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--pause-panel-color);
+    border-top-width: var(--pause-line-width);
+    border-right-width: var(--pause-line-width);
+    border-bottom-width: var(--pause-line-width);
+    border-left-width: var(--pause-line-width);
+    border-top-color: var(--pause-line-color);
+    border-right-color: var(--pause-line-color);
+    border-bottom-color: var(--pause-line-color);
+    border-left-color: var(--pause-line-color);
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.pause-menu-button {
+    width: 600px;
+    height: 150px;
+    margin: 0;
+    padding: 0;
+    flex-shrink: 0;
+    color: var(--pause-line-color);
+    background-color: var(--pause-button-color);
+    border-top-width: var(--pause-line-width);
+    border-right-width: var(--pause-line-width);
+    border-bottom-width: var(--pause-line-width);
+    border-left-width: var(--pause-line-width);
+    border-top-color: var(--pause-line-color);
+    border-right-color: var(--pause-line-color);
+    border-bottom-color: var(--pause-line-color);
+    border-left-color: var(--pause-line-color);
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+    border-bottom-right-radius: 18px;
+    border-bottom-left-radius: 18px;
+    font-size: 52px;
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+}
+
+.pause-menu-button:hover {
+    background-color: var(--pause-button-hover-color);
+}
+
+.pause-menu-button:active {
+    color: var(--pause-button-color);
+    background-color: var(--pause-button-pressed-color);
+}

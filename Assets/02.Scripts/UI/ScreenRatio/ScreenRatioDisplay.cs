@@ -6,7 +6,7 @@ namespace SUDOKU.UI.ScreenRatio
 {
     using Enum;
 
-    public sealed class ScreenRatioDisplay : MonoBehaviour
+    public class ScreenRatioDisplay : MonoBehaviour
     {
         [Tooltip("화면 비율의 계산 방향을 선택합니다.")]
         [SerializeField] private EScreenRatioMode ratioMode = EScreenRatioMode.WidthHeight;

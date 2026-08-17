@@ -2,6 +2,7 @@
     --number-pad-surface-color: rgb(250, 249, 245);
     --number-pad-pressed-color: rgb(48, 48, 46);
     --number-pad-hover-color: rgb(230, 229, 225);
+    --memo-active-color: rgb(142, 141, 137);
     --number-pad-line-width: 5px;
 }
 
@@ -81,8 +82,12 @@
     background-color: var(--number-pad-hover-color);
 }
 
-.game-control-button:active,
-.game-control-button.selected {
+.game-control-button.memo-active {
+    color: var(--number-pad-surface-color);
+    background-color: var(--memo-active-color);
+}
+
+.game-control-button:active {
     color: var(--number-pad-surface-color);
     background-color: var(--number-pad-pressed-color);
 }
@@ -201,8 +206,7 @@
     background-color: var(--number-pad-hover-color);
 }
 
-.number-button:active,
-.number-button.selected {
+.number-button:active {
     color: var(--number-pad-surface-color);
     background-color: var(--number-pad-pressed-color);
 }

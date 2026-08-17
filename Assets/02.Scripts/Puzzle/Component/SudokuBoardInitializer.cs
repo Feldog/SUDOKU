@@ -4,7 +4,7 @@ namespace SUDOKU.Puzzle.Component
 {
     using View;
 
-    public sealed class SudokuBoardInitializer : MonoBehaviour
+    public class SudokuBoardInitializer : MonoBehaviour
     {
         [Tooltip("초기 보드 틀에 사용할 Region 데이터를 제공하는 Controller입니다.")]
         [SerializeField] private SudokuRegionController regionController;

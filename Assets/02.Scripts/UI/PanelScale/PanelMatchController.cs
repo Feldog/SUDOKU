@@ -3,7 +3,7 @@ using UnityEngine.UIElements;
 
 namespace SUDOKU.UI.PanelScale
 {
-    public sealed class PanelMatchController : MonoBehaviour
+    public class PanelMatchController : MonoBehaviour
     {
         [Tooltip("화면 비율에 따라 Match 값을 변경할 UI Document입니다.")]
         [SerializeField] private UIDocument uiDocument;

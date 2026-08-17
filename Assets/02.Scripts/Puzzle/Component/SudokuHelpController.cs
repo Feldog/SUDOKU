@@ -5,7 +5,7 @@ namespace SUDOKU.Puzzle.Component
 {
     using Define;
 
-    public sealed class SudokuHelpController : MonoBehaviour
+    public class SudokuHelpController : MonoBehaviour
     {
         private const string HelpHighlightedClass = "help-highlighted";
         private const string SameValueHighlightedClass = "same-value-highlighted";
@@ -24,6 +24,9 @@ namespace SUDOKU.Puzzle.Component
 
         [Tooltip("선택 셀의 값과 숫자별 셀 인덱스를 제공할 Controller입니다.")]
         [SerializeField] private SudokuCellController cellController;
+
+        [Tooltip("현재 선택된 셀 정보를 제공할 Sudoku Controller입니다.")]
+        [SerializeField] private SudokuController sudokuController;
 
         private readonly VisualElement[] cells = new VisualElement[SudokuDefine.CellCount];
 
@@ -91,7 +94,7 @@ namespace SUDOKU.Puzzle.Component
         }
 
         /// <summary>
-        /// 게임 보드 셀의 클릭 이벤트를 등록합니다.
+        /// Sudoku 선택 상태와 Cell 값 변경 이벤트를 등록합니다.
         /// </summary>
         private void RegisterCallbacks()
         {
@@ -100,24 +103,19 @@ namespace SUDOKU.Puzzle.Component
                 return;
             }
 
-            if (cellController == null)
+            if (cellController == null || sudokuController == null)
             {
-                Debug.LogError("동일 숫자 도움 기능에 사용할 Cell Controller가 연결되지 않았습니다.", this);
+                Debug.LogError("Help 기능에 Cell Controller와 Sudoku Controller를 연결해야 합니다.", this);
                 return;
             }
 
-            for (int cellIndex = 0; cellIndex < cells.Length; cellIndex++)
-            {
-                cells[cellIndex].userData = cellIndex;
-                cells[cellIndex].RegisterCallback<ClickEvent>(OnCellClicked);
-            }
-
+            sudokuController.CellSelected += OnCellSelected;
             cellController.CellValueChanged += OnCellValueChanged;
             callbacksRegistered = true;
         }
 
         /// <summary>
-        /// 게임 보드 셀에 등록한 클릭 이벤트를 해제합니다.
+        /// Sudoku 선택 상태와 Cell 값 변경 이벤트를 해제합니다.
         /// </summary>
         private void UnregisterCallbacks()
         {
@@ -126,14 +124,14 @@ namespace SUDOKU.Puzzle.Component
                 return;
             }
 
-            for (int cellIndex = 0; cellIndex < cells.Length; cellIndex++)
-            {
-                cells[cellIndex]?.UnregisterCallback<ClickEvent>(OnCellClicked);
-            }
-
             if (cellController != null)
             {
                 cellController.CellValueChanged -= OnCellValueChanged;
+            }
+
+            if (sudokuController != null)
+            {
+                sudokuController.CellSelected -= OnCellSelected;
             }
 
             callbacksRegistered = false;
@@ -174,15 +172,9 @@ namespace SUDOKU.Puzzle.Component
         /// <summary>
         /// 선택한 셀과 같은 행, 열, Region에 도움 강조 표시를 적용합니다.
         /// </summary>
-        /// <param name="clickEvent">선택된 셀 정보를 포함한 UI Toolkit 이벤트입니다.</param>
-        private void OnCellClicked(ClickEvent clickEvent)
+        /// <param name="selectedCellIndex">새로 선택된 셀 인덱스입니다.</param>
+        private void OnCellSelected(int selectedCellIndex)
         {
-            if (clickEvent.currentTarget is not VisualElement selectedCell
-                || selectedCell.userData is not int selectedCellIndex)
-            {
-                return;
-            }
-
             focusedCellIndex = selectedCellIndex;
             RefreshHighlights();
         }
