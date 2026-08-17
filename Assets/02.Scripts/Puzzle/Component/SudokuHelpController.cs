@@ -4,6 +4,7 @@ using UnityEngine.UIElements;
 namespace SUDOKU.Puzzle.Component
 {
     using Define;
+    using SUDOKU.Manager;
 
     public class SudokuHelpController : MonoBehaviour
     {
@@ -30,8 +31,10 @@ namespace SUDOKU.Puzzle.Component
 
         private readonly VisualElement[] cells = new VisualElement[SudokuDefine.CellCount];
 
+        private OptionManager optionManager;
         private int focusedCellIndex = -1;
         private bool callbacksRegistered;
+        private bool optionCallbacksRegistered;
         private bool hasStarted;
 
         public bool IsHelpEnabled => isHelpEnabled;
@@ -47,6 +50,8 @@ namespace SUDOKU.Puzzle.Component
 
         private void OnEnable()
         {
+            LoadAndRegisterOptionCallbacks();
+
             if (hasStarted)
             {
                 RegisterCallbacks();
@@ -55,6 +60,7 @@ namespace SUDOKU.Puzzle.Component
 
         private void OnDisable()
         {
+            UnregisterOptionCallbacks();
             UnregisterCallbacks();
             ClearHighlights();
         }
@@ -76,11 +82,7 @@ namespace SUDOKU.Puzzle.Component
         public void SetHelpEnabled(bool isEnabled)
         {
             isHelpEnabled = isEnabled;
-
-            if (!isHelpEnabled)
-            {
-                RefreshHighlights();
-            }
+            RefreshHighlights();
         }
 
         /// <summary>
@@ -92,6 +94,52 @@ namespace SUDOKU.Puzzle.Component
             isSameValueHelpEnabled = isEnabled;
             RefreshHighlights();
         }
+
+        #region Option
+
+        /// <summary>
+        /// Option Manager의 현재 Help 설정을 적용하고 변경 이벤트를 구독합니다.
+        /// </summary>
+        private void LoadAndRegisterOptionCallbacks()
+        {
+            if (optionCallbacksRegistered)
+            {
+                return;
+            }
+
+            optionManager = OptionManager.Instance;
+
+            if (optionManager == null)
+            {
+                SetHelpEnabled(true);
+                SetSameValueHelpEnabled(true);
+                return;
+            }
+
+            SetHelpEnabled(optionManager.IsAreaHelpEnabled);
+            SetSameValueHelpEnabled(optionManager.IsSameValueHelpEnabled);
+            optionManager.AreaHelpStateChanged += SetHelpEnabled;
+            optionManager.SameValueHelpStateChanged += SetSameValueHelpEnabled;
+            optionCallbacksRegistered = true;
+        }
+
+        /// <summary>
+        /// Option Manager에 등록한 Help 설정 변경 이벤트를 해제합니다.
+        /// </summary>
+        private void UnregisterOptionCallbacks()
+        {
+            if (!optionCallbacksRegistered || optionManager == null)
+            {
+                return;
+            }
+
+            optionManager.AreaHelpStateChanged -= SetHelpEnabled;
+            optionManager.SameValueHelpStateChanged -= SetSameValueHelpEnabled;
+            optionCallbacksRegistered = false;
+            optionManager = null;
+        }
+
+        #endregion
 
         /// <summary>
         /// Sudoku 선택 상태와 Cell 값 변경 이벤트를 등록합니다.

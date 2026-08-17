@@ -128,8 +128,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 55427660}
-  - component: {fileID: 55427672}
   - component: {fileID: 55427661}
+  - component: {fileID: 55427672}
   - component: {fileID: 55427664}
   - component: {fileID: 55427663}
   - component: {fileID: 55427666}
@@ -139,6 +139,7 @@ GameObject:
   - component: {fileID: 55427671}
   - component: {fileID: 55427670}
   - component: {fileID: 55427673}
+  - component: {fileID: 55427676}
   - component: {fileID: 55427674}
   - component: {fileID: 55427675}
   m_Layer: 0
@@ -241,6 +242,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SUDOKU.Puzzle.Component.SudokuCellController
   regionController: {fileID: 55427664}
+  memoController: {fileID: 0}
 --- !u!114 &55427667
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -345,6 +347,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SUDOKU.Puzzle.Component.SudokuGameInitializer
   cellController: {fileID: 55427666}
+  hintController: {fileID: 55427676}
 --- !u!114 &55427675
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -360,6 +363,20 @@ MonoBehaviour:
   cellController: {fileID: 55427666}
   timerController: {fileID: 729236137}
   clearMenuController: {fileID: 445299771}
+--- !u!114 &55427676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 55427659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5031898a5c36a2b44b705493a8c771dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SUDOKU.Puzzle.Component.SudokuHintController
+  playerControlDocument: {fileID: 262600852}
+  cellController: {fileID: 55427666}
 --- !u!1 &262600850
 GameObject:
   m_ObjectHideFlags: 0

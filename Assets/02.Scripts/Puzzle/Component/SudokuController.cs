@@ -216,11 +216,7 @@ namespace SUDOKU.Puzzle.Component
                 return;
             }
 
-            if (cellController.SetCellValue(selectedCellIndex, value)
-                && value != SudokuDefine.EmptyCellValue)
-            {
-                memoController.ClearMemo(selectedCellIndex);
-            }
+            cellController.SetCellValue(selectedCellIndex, value);
         }
 
         /// <summary>

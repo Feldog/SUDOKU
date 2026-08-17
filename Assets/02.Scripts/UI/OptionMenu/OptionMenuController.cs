@@ -4,6 +4,8 @@ using UnityEngine.UIElements;
 
 namespace SUDOKU.UI.OptionMenu
 {
+    using SUDOKU.Manager;
+
     public class OptionMenuController : MonoBehaviour
     {
         [Tooltip("Sound와 Help 설정 및 Return 버튼을 포함한 Option UI Document입니다.")]
@@ -24,6 +26,7 @@ namespace SUDOKU.UI.OptionMenu
         private Button returnButton;
         private Label areaHelpStateLabel;
         private Label sameValueHelpStateLabel;
+        private OptionManager optionManager;
         private bool callbacksRegistered;
         private bool hasStarted;
 
@@ -67,6 +70,7 @@ namespace SUDOKU.UI.OptionMenu
         /// </summary>
         public void Show()
         {
+            SynchronizeOptionData();
             RefreshView();
             SetVisibility(true);
         }
@@ -191,7 +195,31 @@ namespace SUDOKU.UI.OptionMenu
         /// </summary>
         private void RequestReturn()
         {
+            optionManager?.SaveOptions(
+                soundVolume,
+                isAreaHelpEnabled,
+                isSameValueHelpEnabled);
             ReturnRequested?.Invoke();
+        }
+
+        /// <summary>
+        /// Option Manager의 저장 데이터를 불러오고 Manager가 없으면 기본값을 적용합니다.
+        /// </summary>
+        private void SynchronizeOptionData()
+        {
+            optionManager = OptionManager.Instance;
+
+            if (optionManager == null)
+            {
+                soundVolume = OptionManager.DefaultSoundVolume;
+                isAreaHelpEnabled = OptionManager.DefaultAreaHelpEnabled;
+                isSameValueHelpEnabled = OptionManager.DefaultSameValueHelpEnabled;
+                return;
+            }
+
+            soundVolume = optionManager.SoundVolume;
+            isAreaHelpEnabled = optionManager.IsAreaHelpEnabled;
+            isSameValueHelpEnabled = optionManager.IsSameValueHelpEnabled;
         }
 
         /// <summary>

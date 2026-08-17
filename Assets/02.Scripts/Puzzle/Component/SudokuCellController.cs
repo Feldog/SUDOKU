@@ -20,6 +20,9 @@ namespace SUDOKU.Puzzle.Component
         [Tooltip("셀 값의 행, 열, Region 규칙을 검사할 Region Controller입니다.")]
         [SerializeField] private SudokuRegionController regionController;
 
+        [Tooltip("Cell에 숫자가 입력될 때 해당 Cell의 Memo를 제거할 Controller입니다.")]
+        [SerializeField] private SudokuMemoController memoController;
+
         #endregion
 
         #region Events And Properties
@@ -233,6 +236,7 @@ namespace SUDOKU.Puzzle.Component
             if (value >= SudokuDefine.MinCellValue)
             {
                 cellIndicesByValue[value].Add(cellIndex);
+                memoController?.ClearMemo(cellIndex);
             }
 
             CellValueChanged?.Invoke(cellIndex, previousValue, value);

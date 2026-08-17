@@ -13,6 +13,9 @@ namespace SUDOKU.Puzzle.Component
         [Tooltip("생성된 Sudoku 문제의 Given 값을 적용할 Cell Controller입니다.")]
         [SerializeField] private SudokuCellController cellController;
 
+        [Tooltip("생성된 Sudoku 정답을 전달받아 관리할 Hint Controller입니다.")]
+        [SerializeField] private SudokuHintController hintController;
+
         private bool isInitializing;
 
         #region Unity Callbacks
@@ -36,9 +39,9 @@ namespace SUDOKU.Puzzle.Component
                 return;
             }
 
-            if (cellController == null)
+            if (cellController == null || hintController == null)
             {
-                Debug.LogError("생성된 문제를 적용할 Sudoku Cell Controller가 연결되지 않았습니다.", this);
+                Debug.LogError("문제와 정답을 전달할 Cell Controller와 Hint Controller가 연결되지 않았습니다.", this);
                 return;
             }
 
@@ -57,15 +60,16 @@ namespace SUDOKU.Puzzle.Component
                 ESudokuDifficulty difficulty = ResolveDifficulty();
                 SudokuPuzzleData puzzleData = await generationManager.GeneratePuzzleAsync(difficulty);
 
-                if (this == null || cellController == null)
+                if (this == null || cellController == null || hintController == null)
                 {
                     return;
                 }
 
                 if (puzzleData == null
-                    || !cellController.InitializeGivenCells(puzzleData.GetPuzzle()))
+                    || !cellController.InitializeGivenCells(puzzleData.GetPuzzle())
+                    || !hintController.InitializeSolution(puzzleData.GetSolution()))
                 {
-                    Debug.LogError("생성된 Sudoku 문제를 Cell에 적용하지 못했습니다.", this);
+                    Debug.LogError("생성된 Sudoku 문제 또는 정답을 Controller에 적용하지 못했습니다.", this);
                 }
             }
             finally
