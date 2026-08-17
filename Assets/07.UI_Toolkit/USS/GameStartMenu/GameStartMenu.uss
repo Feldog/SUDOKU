@@ -1,0 +1,93 @@
+:root {
+    --game-start-panel-color: rgb(242, 241, 237);
+    --game-start-surface-color: rgb(250, 249, 245);
+    --game-start-hover-color: rgb(220, 219, 215);
+    --game-start-pressed-color: rgb(142, 141, 137);
+    --game-start-line-color: rgb(48, 48, 46);
+    --game-start-line-width: 5px;
+}
+
+.game-start-menu-canvas {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.game-start-menu-panel {
+    width: 780px;
+    height: 1180px;
+    padding-top: 60px;
+    padding-right: 60px;
+    padding-bottom: 60px;
+    padding-left: 60px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--game-start-panel-color);
+    border-top-width: var(--game-start-line-width);
+    border-right-width: var(--game-start-line-width);
+    border-bottom-width: var(--game-start-line-width);
+    border-left-width: var(--game-start-line-width);
+    border-top-color: var(--game-start-line-color);
+    border-right-color: var(--game-start-line-color);
+    border-bottom-color: var(--game-start-line-color);
+    border-left-color: var(--game-start-line-color);
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.difficulty-title-label {
+    width: 660px;
+    height: 120px;
+    color: var(--game-start-line-color);
+    font-size: 58px;
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+}
+
+.difficulty-button-group {
+    width: 660px;
+    height: 820px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.difficulty-button {
+    width: 660px;
+    height: 140px;
+    margin: 0;
+    padding: 0;
+    flex-shrink: 0;
+    color: var(--game-start-line-color);
+    background-color: var(--game-start-surface-color);
+    border-top-width: var(--game-start-line-width);
+    border-right-width: var(--game-start-line-width);
+    border-bottom-width: var(--game-start-line-width);
+    border-left-width: var(--game-start-line-width);
+    border-top-color: var(--game-start-line-color);
+    border-right-color: var(--game-start-line-color);
+    border-bottom-color: var(--game-start-line-color);
+    border-left-color: var(--game-start-line-color);
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+    border-bottom-right-radius: 18px;
+    border-bottom-left-radius: 18px;
+    font-size: 46px;
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+}
+
+.difficulty-button:hover {
+    background-color: var(--game-start-hover-color);
+}
+
+.difficulty-button:active {
+    color: var(--game-start-surface-color);
+    background-color: var(--game-start-pressed-color);
+}

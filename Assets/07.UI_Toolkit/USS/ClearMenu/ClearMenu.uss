@@ -1,0 +1,132 @@
+:root {
+    --clear-panel-color: rgb(242, 241, 237);
+    --clear-surface-color: rgb(250, 249, 245);
+    --clear-hover-color: rgb(220, 219, 215);
+    --clear-pressed-color: rgb(142, 141, 137);
+    --clear-line-color: rgb(48, 48, 46);
+    --clear-line-width: 5px;
+}
+
+.clear-menu-canvas {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.clear-menu-panel {
+    width: 720px;
+    height: 800px;
+    padding-top: 60px;
+    padding-right: 60px;
+    padding-bottom: 60px;
+    padding-left: 60px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--clear-panel-color);
+    border-top-width: var(--clear-line-width);
+    border-right-width: var(--clear-line-width);
+    border-bottom-width: var(--clear-line-width);
+    border-left-width: var(--clear-line-width);
+    border-top-color: var(--clear-line-color);
+    border-right-color: var(--clear-line-color);
+    border-bottom-color: var(--clear-line-color);
+    border-left-color: var(--clear-line-color);
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.clear-title-label {
+    width: 600px;
+    height: 130px;
+    color: var(--clear-line-color);
+    font-size: 84px;
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+}
+
+.completion-time-area {
+    width: 600px;
+    height: 190px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--clear-surface-color);
+    border-top-width: var(--clear-line-width);
+    border-right-width: var(--clear-line-width);
+    border-bottom-width: var(--clear-line-width);
+    border-left-width: var(--clear-line-width);
+    border-top-color: var(--clear-line-color);
+    border-right-color: var(--clear-line-color);
+    border-bottom-color: var(--clear-line-color);
+    border-left-color: var(--clear-line-color);
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+    border-bottom-right-radius: 18px;
+    border-bottom-left-radius: 18px;
+}
+
+.completion-time-title-label {
+    width: 540px;
+    height: 60px;
+    color: var(--clear-line-color);
+    font-size: 34px;
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+}
+
+.completion-time-label {
+    width: 540px;
+    height: 90px;
+    color: var(--clear-line-color);
+    font-size: 58px;
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+}
+
+.clear-button-area {
+    width: 600px;
+    height: 310px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.clear-menu-button {
+    width: 600px;
+    height: 140px;
+    margin: 0;
+    padding: 0;
+    flex-shrink: 0;
+    color: var(--clear-line-color);
+    background-color: var(--clear-surface-color);
+    border-top-width: var(--clear-line-width);
+    border-right-width: var(--clear-line-width);
+    border-bottom-width: var(--clear-line-width);
+    border-left-width: var(--clear-line-width);
+    border-top-color: var(--clear-line-color);
+    border-right-color: var(--clear-line-color);
+    border-bottom-color: var(--clear-line-color);
+    border-left-color: var(--clear-line-color);
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+    border-bottom-right-radius: 18px;
+    border-bottom-left-radius: 18px;
+    font-size: 48px;
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+}
+
+.clear-menu-button:hover {
+    background-color: var(--clear-hover-color);
+}
+
+.clear-menu-button:active {
+    color: var(--clear-surface-color);
+    background-color: var(--clear-pressed-color);
+}

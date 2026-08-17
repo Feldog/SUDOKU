@@ -1,0 +1,212 @@
+:root {
+    --number-pad-surface-color: rgb(250, 249, 245);
+    --number-pad-pressed-color: rgb(48, 48, 46);
+    --number-pad-hover-color: rgb(230, 229, 225);
+    --memo-active-color: rgb(142, 141, 137);
+    --number-pad-line-width: 5px;
+}
+
+.player-sudoku-control-canvas {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.control-area {
+    position: absolute;
+    right: 0;
+    left: 0;
+    flex-shrink: 0;
+}
+
+.top-control-area {
+    top: 0;
+    height: 288px;
+}
+
+.game-view-area {
+    top: 288px;
+    height: 960px;
+}
+
+.bottom-control-area {
+    bottom: 0;
+    height: 672px;
+    align-items: center;
+    justify-content: center;
+}
+
+.player-control-group {
+    width: 972px;
+    height: 560px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.game-control-row {
+    width: 972px;
+    height: 120px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.game-control-button {
+    width: 216px;
+    height: 120px;
+    margin: 0;
+    padding: 0;
+    flex-shrink: 0;
+    color: var(--number-pad-pressed-color);
+    background-color: var(--number-pad-surface-color);
+    border-top-width: var(--number-pad-line-width);
+    border-right-width: var(--number-pad-line-width);
+    border-bottom-width: var(--number-pad-line-width);
+    border-left-width: var(--number-pad-line-width);
+    border-top-color: var(--number-pad-pressed-color);
+    border-right-color: var(--number-pad-pressed-color);
+    border-bottom-color: var(--number-pad-pressed-color);
+    border-left-color: var(--number-pad-pressed-color);
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+    font-size: 42px;
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+}
+
+.game-control-button:hover {
+    background-color: var(--number-pad-hover-color);
+}
+
+.game-control-button.memo-active {
+    color: var(--number-pad-surface-color);
+    background-color: var(--memo-active-color);
+}
+
+.game-control-button:active {
+    color: var(--number-pad-surface-color);
+    background-color: var(--number-pad-pressed-color);
+}
+
+.timer-panel {
+    position: absolute;
+    left: 60px;
+    top: 60px;
+    width: 300px;
+    height: 120px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(214, 213, 209);
+    border-top-width: 5px;
+    border-right-width: 5px;
+    border-bottom-width: 5px;
+    border-left-width: 5px;
+    border-top-color: var(--number-pad-pressed-color);
+    border-right-color: var(--number-pad-pressed-color);
+    border-bottom-color: var(--number-pad-pressed-color);
+    border-left-color: var(--number-pad-pressed-color);
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.timer-label {
+    color: var(--number-pad-pressed-color);
+    font-size: 54px;
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+}
+
+.pause-button {
+    position: absolute;
+    right: 60px;
+    top: 60px;
+    width: 120px;
+    height: 120px;
+    margin: 0;
+    padding: 0;
+    color: var(--number-pad-pressed-color);
+    background-color: rgb(214, 213, 209);
+    border-top-width: 5px;
+    border-right-width: 5px;
+    border-bottom-width: 5px;
+    border-left-width: 5px;
+    border-top-color: var(--number-pad-pressed-color);
+    border-right-color: var(--number-pad-pressed-color);
+    border-bottom-color: var(--number-pad-pressed-color);
+    border-left-color: var(--number-pad-pressed-color);
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    font-size: 52px;
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+}
+
+.pause-button:hover {
+    background-color: var(--number-pad-hover-color);
+}
+
+.pause-button:active {
+    color: var(--number-pad-surface-color);
+    background-color: var(--number-pad-pressed-color);
+}
+
+.number-pad {
+    width: 972px;
+    height: 412px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.number-pad-row {
+    width: 972px;
+    height: 190px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.number-button {
+    width: 175px;
+    height: 190px;
+    margin: 0;
+    padding: 0;
+    flex-shrink: 0;
+    color: var(--number-pad-pressed-color);
+    background-color: var(--number-pad-surface-color);
+    border-top-width: var(--number-pad-line-width);
+    border-right-width: var(--number-pad-line-width);
+    border-bottom-width: var(--number-pad-line-width);
+    border-left-width: var(--number-pad-line-width);
+    border-top-color: var(--number-pad-pressed-color);
+    border-right-color: var(--number-pad-pressed-color);
+    border-bottom-color: var(--number-pad-pressed-color);
+    border-left-color: var(--number-pad-pressed-color);
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+    font-size: 56px;
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+}
+
+.erase-button {
+    font-size: 36px;
+}
+
+.number-button:hover {
+    background-color: var(--number-pad-hover-color);
+}
+
+.number-button:active {
+    color: var(--number-pad-surface-color);
+    background-color: var(--number-pad-pressed-color);
+}

@@ -1,0 +1,15 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/07.UI_Toolkit/USS/GameStartMenu/GameStartMenu.uss"/>
+    <ui:VisualElement name="game-start-menu-canvas" class="game-start-menu-canvas">
+        <ui:VisualElement name="game-start-menu-panel" class="game-start-menu-panel">
+            <ui:Label name="difficulty-title-label" text="Select Difficulty" class="difficulty-title-label"/>
+            <ui:VisualElement name="difficulty-button-group" class="difficulty-button-group">
+                <ui:Button name="easy-button" text="Easy" class="difficulty-button"/>
+                <ui:Button name="normal-button" text="Normal" class="difficulty-button"/>
+                <ui:Button name="hard-button" text="Hard" class="difficulty-button"/>
+                <ui:Button name="extreme-button" text="Extreme" class="difficulty-button"/>
+                <ui:Button name="return-button" text="Return" class="difficulty-button return-button"/>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

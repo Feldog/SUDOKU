@@ -1,0 +1,200 @@
+:root {
+    --canvas-color: rgb(242, 241, 237);
+    --board-color: rgb(250, 249, 245);
+    --line-color: rgb(48, 48, 46);
+    --cell-line-color: rgb(190, 189, 185);
+    --region-line-color: rgb(48, 48, 46);
+    --border-line-width: 5px;
+}
+
+.game-canvas {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--canvas-color);
+}
+
+.control-space {
+    width: 1080px;
+    flex-shrink: 0;
+}
+
+.top-control-space {
+    height: 288px;
+}
+
+.bottom-control-space {
+    height: 672px;
+}
+
+.game-content {
+    width: 1080px;
+    height: 960px;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.sudoku-board {
+    width: 954px;
+    height: 954px;
+    flex-direction: column;
+    flex-shrink: 0;
+    background-color: var(--board-color);
+}
+
+.board-row {
+    width: 954px;
+    height: 106px;
+    flex-direction: row;
+    flex-shrink: 0;
+}
+
+.board-cell {
+    width: 106px;
+    height: 106px;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--board-color);
+}
+
+.cell-border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 106px;
+    height: 106px;
+    border-right-width: var(--border-line-width);
+    border-bottom-width: var(--border-line-width);
+    border-right-color: var(--cell-line-color);
+    border-bottom-color: var(--cell-line-color);
+}
+
+.region-border-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 954px;
+    height: 954px;
+}
+
+.region-border {
+    position: absolute;
+    width: 106px;
+    height: 106px;
+}
+
+.board-outer-border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 954px;
+    height: 954px;
+    border-top-width: var(--border-line-width);
+    border-right-width: var(--border-line-width);
+    border-bottom-width: var(--border-line-width);
+    border-left-width: var(--border-line-width);
+    border-top-color: var(--region-line-color);
+    border-right-color: var(--region-line-color);
+    border-bottom-color: var(--region-line-color);
+    border-left-color: var(--region-line-color);
+}
+
+.board-cell.help-highlighted {
+    background-color: #b2ebf4;
+}
+
+.board-cell.same-value-highlighted {
+    background-color: #a8e6a3;
+}
+
+.board-cell.focused {
+    background-color: #5cd1e5;
+}
+
+.cell-label {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    color: var(--line-color);
+    font-size: 64px;
+    -unity-font-definition: url("project://database/Assets/97.Font/Board Font/PretendardJP-Default Number SDF.asset");
+    -unity-font-style: normal;
+    -unity-text-align: middle-center;
+    -unity-text-generator: standard;
+}
+
+.memo-area {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 102px;
+    height: 102px;
+    margin-top: 2px;
+    margin-right: 2px;
+    margin-bottom: 2px;
+    margin-left: 2px;
+    flex-direction: column;
+}
+
+.memo-row {
+    width: 102px;
+    height: 34px;
+    min-height: 34px;
+    max-height: 34px;
+    flex-direction: row;
+    flex-shrink: 0;
+}
+
+.memo-label {
+    visibility: hidden;
+    width: 34px;
+    height: 34px;
+    min-width: 34px;
+    min-height: 34px;
+    max-width: 34px;
+    max-height: 34px;
+    margin: 0;
+    padding: 0;
+    flex-basis: 34px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    translate: -1px -1px;
+    color: var(--line-color);
+    font-size: 24px;
+    -unity-font-definition: url("project://database/Assets/97.Font/Board Font/PretendardJP-Default Number SDF.asset");
+    -unity-font-style: normal;
+    -unity-text-align: middle-center;
+    -unity-text-generator: standard;
+}
+
+.memo-label.memo-visible {
+    visibility: visible;
+}
+
+.cell-label.given {
+    -unity-font-style: bold;
+}
+
+.cell-label.invalid {
+    color: #d9534f;
+}
+
+.border-right-region {
+    border-right-width: var(--border-line-width);
+    border-right-color: var(--region-line-color);
+}
+
+.border-bottom-region {
+    border-bottom-width: var(--border-line-width);
+    border-bottom-color: var(--region-line-color);
+}

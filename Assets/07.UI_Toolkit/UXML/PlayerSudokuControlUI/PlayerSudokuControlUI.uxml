@@ -1,0 +1,38 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/07.UI_Toolkit/USS/PlayerSudokuControlUI/PlayerSudokuControlUI.uss?fileID=7433441132597879392&amp;guid=a271ac2092609e14986e2d906efb3944&amp;type=3#PlayerSudokuControlUI"/>
+    <ui:VisualElement name="player-sudoku-control-canvas" picking-mode="Ignore" class="player-sudoku-control-canvas">
+        <ui:VisualElement name="top-control-area" class="control-area top-control-area">
+            <ui:VisualElement name="timer-panel" class="timer-panel">
+                <ui:Label name="timer-label" text="00:00" class="timer-label"/>
+            </ui:VisualElement>
+            <ui:Button name="pause-button" text="Ⅱ" class="pause-button"/>
+        </ui:VisualElement>
+        <ui:VisualElement name="game-view-area" picking-mode="Ignore" class="control-area game-view-area"/>
+        <ui:VisualElement name="bottom-control-area" class="control-area bottom-control-area">
+            <ui:VisualElement name="player-control-group" class="player-control-group">
+                <ui:VisualElement name="game-control-row" class="game-control-row">
+                    <ui:Button name="hint-button" text="Hint" class="game-control-button"/>
+                    <ui:Button name="undo-button" text="Undo" class="game-control-button"/>
+                    <ui:Button name="do-button" text="Do" class="game-control-button"/>
+                    <ui:Button name="memo-button" text="Memo" class="game-control-button"/>
+                </ui:VisualElement>
+                <ui:VisualElement name="number-pad" class="number-pad">
+                    <ui:VisualElement name="number-pad-row-1" class="number-pad-row">
+                        <ui:Button name="number-button-1" text="1" class="number-button"/>
+                        <ui:Button name="number-button-2" text="2" class="number-button"/>
+                        <ui:Button name="number-button-3" text="3" class="number-button"/>
+                        <ui:Button name="number-button-4" text="4" class="number-button"/>
+                        <ui:Button name="number-button-5" text="5" class="number-button"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="number-pad-row-2" class="number-pad-row">
+                        <ui:Button name="number-button-6" text="6" class="number-button"/>
+                        <ui:Button name="number-button-7" text="7" class="number-button"/>
+                        <ui:Button name="number-button-8" text="8" class="number-button"/>
+                        <ui:Button name="number-button-9" text="9" class="number-button"/>
+                        <ui:Button name="erase-button" text="지우기" class="number-button erase-button"/>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
